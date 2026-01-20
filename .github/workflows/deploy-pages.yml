@@ -4,11 +4,15 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 permissions:
   contents: read
   pages: write
   id-token: write
+
+env:
+  OUTPUT_DIR: ./dist   # change this to ./build or ./public if needed
 
 jobs:
   build-and-deploy:
@@ -22,33 +26,45 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-          cache: 'npm'
 
-      - name: Install dependencies
-        # Use `npm ci` if you commit package-lock.json; otherwise `npm install`
-        run: npm ci
+      - name: Install dependencies (handle lockfile)
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          elif [ -f yarn.lock ]; then
+            yarn install --frozen-lockfile
+          else
+            npm install
+          fi
 
       - name: Build site
-        # Change this to your project's build command if different
         run: npm run build
 
-      - name: Ensure output exists and disable Jekyll
+      - name: Debug: list build output and show run id
         run: |
-          if [ -d "./dist" ]; then
-            echo "dist exists"
+          echo "GITHUB_RUN_ID=$GITHUB_RUN_ID"
+          echo "Workspace: $(pwd)"
+          echo "OUTPUT_DIR=$OUTPUT_DIR"
+          if [ -d "$OUTPUT_DIR" ]; then
+            echo "Contents of $OUTPUT_DIR:"
+            ls -la "$OUTPUT_DIR"
+            echo "File list (first 200 lines):"
+            find "$OUTPUT_DIR" -type f | sed -n '1,200p'
           else
-            echo "ERROR: build output folder './dist' does not exist" && exit 1
+            echo "ERROR: build output folder '$OUTPUT_DIR' does not exist" >&2
+            exit 1
           fi
-          # Prevent GitHub Pages from trying to process the site with Jekyll
-          touch ./dist/.nojekyll
+
+      - name: Prevent Jekyll
+        run: touch $OUTPUT_DIR/.nojekyll
 
       - name: Configure Pages
         uses: actions/configure-pages@v3
 
       - name: Upload artifact for Pages
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v1
         with:
-          path: ./dist
+          path: ${{ env.OUTPUT_DIR }}
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
