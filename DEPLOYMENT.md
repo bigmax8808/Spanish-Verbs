@@ -14,11 +14,18 @@ The repository is configured for automatic deployment to GitHub Pages using GitH
 
 ### Step 1: Enable GitHub Pages
 
+**Option A: If GitHub Actions is NOT yet selected:**
 1. Go to your repository on GitHub: https://github.com/bigmax8808/Spanish-Verbs
 2. Click on **Settings** (in the repository menu)
 3. In the left sidebar, click on **Pages** (under "Code and automation")
 4. Under **Source**, select **GitHub Actions** from the dropdown menu
 5. Click **Save**
+
+**Option B: If GitHub Actions is already selected (greyed out):**
+
+If you see "GitHub Actions" already selected and greyed out with no Save button, this is actually CORRECT! The greyed-out state means GitHub Pages is already configured to use GitHub Actions for deployment.
+
+The issue is likely that the workflow needs proper permissions or a manual trigger. Continue to Step 2 to verify permissions, then manually trigger the workflow in Step 3.
 
 ### Step 2: Verify Workflow Permissions
 
@@ -59,6 +66,45 @@ Once deployment is successful, your application will be available at:
 **https://bigmax8808.github.io/Spanish-Verbs/**
 
 ## Troubleshooting
+
+### GitHub Actions is Greyed Out with No Save Button
+
+**Symptoms:**
+- You go to Settings → Pages
+- "GitHub Actions" is already selected (checked)
+- The option is greyed out
+- There's no Save button visible
+- Site still shows 404 error
+
+**This is actually NORMAL!** The greyed-out state means GitHub Pages is properly configured to use GitHub Actions. The 404 error occurs because the workflow hasn't run successfully yet. Here's how to fix it:
+
+**Solution Steps:**
+
+1. **Verify Workflow Permissions:**
+   - Go to Settings → Actions → General
+   - Under "Workflow permissions", select **Read and write permissions**
+   - Check **Allow GitHub Actions to create and approve pull requests**
+   - Click **Save**
+
+2. **Manually Trigger the Workflow:**
+   - Go to the **Actions** tab
+   - Click on "Build and deploy to GitHub Pages" workflow
+   - Click **Run workflow** button (top right)
+   - Select `copilot/deploy-application` branch (or `main` if this PR is merged)
+   - Click **Run workflow**
+   - Wait 2-3 minutes for it to complete
+
+3. **Check Workflow Status:**
+   - Stay on the Actions tab
+   - You should see a yellow dot (running) that turns green (success) or red (failed)
+   - If it turns green, wait a few more minutes and check https://bigmax8808.github.io/Spanish-Verbs/
+   - If it turns red, click on the failed run to see error details
+
+4. **If Workflow Doesn't Start:**
+   - The workflow might be disabled
+   - Go to Actions tab → Click on "Build and deploy to GitHub Pages"
+   - If you see an "Enable workflow" button, click it
+   - Then try triggering it again (Step 2)
 
 ### Deployment Fails with 404 Error
 
