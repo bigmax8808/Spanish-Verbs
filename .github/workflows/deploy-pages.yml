@@ -1,0 +1,54 @@
+name: Build and deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        # Use `npm ci` if you commit package-lock.json; otherwise `npm install`
+        run: npm ci
+
+      - name: Build site
+        # Change this to your project's build command if different
+        run: npm run build
+
+      - name: Ensure output exists and disable Jekyll
+        run: |
+          if [ -d "./dist" ]; then
+            echo "dist exists"
+          else
+            echo "ERROR: build output folder './dist' does not exist" && exit 1
+          fi
+          # Prevent GitHub Pages from trying to process the site with Jekyll
+          touch ./dist/.nojekyll
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v3
+
+      - name: Upload artifact for Pages
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./dist
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v1
