@@ -46,7 +46,7 @@ To manually trigger:
 The `.github/workflows/deploy-pages.yml` file automates the following steps:
 
 1. **Checkout** - Fetches the repository code
-2. **Setup Node.js** - Installs Node.js 18
+2. **Setup Node.js** - Installs Node.js 20
 3. **Install Dependencies** - Runs `npm ci` to install packages
 4. **Build** - Runs `npm run build` to create production build in `./dist`
 5. **Upload Artifact** - Packages the build for GitHub Pages
