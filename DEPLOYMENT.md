@@ -87,11 +87,26 @@ Once deployment is successful, your application will be available at:
    - Click **Save**
 
 2. **Manually Trigger the Workflow:**
-   - Go to the **Actions** tab
-   - Click on "Build and deploy to GitHub Pages" workflow
-   - Click **Run workflow** button (top right)
+   
+   **Finding the Workflow:**
+   - Go to your repository: https://github.com/bigmax8808/Spanish-Verbs
+   - Click the **Actions** tab (between Pull requests and Projects)
+   - On the left sidebar, you'll see "All workflows"
+   - Look for one of these names:
+     * **"Build and deploy to GitHub Pages"** (the display name)
+     * **".github/workflows/deploy-pages.yml"** (the file name)
+   - Click on it
+   
+   **If you don't see any workflows:**
+   - The workflow file might only exist on the PR branch
+   - Go to: https://github.com/bigmax8808/Spanish-Verbs/actions/workflows/deploy-pages.yml
+   - This direct link should show the workflow
+   
+   **Triggering the Workflow:**
+   - Once on the workflow page, click **Run workflow** button (top right, blue button)
+   - A dropdown will appear
    - Select `copilot/deploy-application` branch (or `main` if this PR is merged)
-   - Click **Run workflow**
+   - Click the green **Run workflow** button in the dropdown
    - Wait 2-3 minutes for it to complete
 
 3. **Check Workflow Status:**
@@ -154,6 +169,17 @@ Error: Resource not accessible by integration
 **Solution:**
 - Check workflow permissions in Settings → Actions → General
 - Enable "Read and write permissions"
+
+## Quick Links
+
+For faster access, use these direct links:
+
+- **Workflow File:** https://github.com/bigmax8808/Spanish-Verbs/actions/workflows/deploy-pages.yml
+- **Repository Actions:** https://github.com/bigmax8808/Spanish-Verbs/actions
+- **Repository Settings:** https://github.com/bigmax8808/Spanish-Verbs/settings
+- **Pages Settings:** https://github.com/bigmax8808/Spanish-Verbs/settings/pages
+- **Actions Settings:** https://github.com/bigmax8808/Spanish-Verbs/settings/actions
+- **Deployed Site:** https://bigmax8808.github.io/Spanish-Verbs/ (after successful deployment)
 
 ## Local Development
 
