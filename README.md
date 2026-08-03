@@ -27,9 +27,10 @@ just returns nothing.
 
 ```bash
 python3 artifact/build.py
-cp artifact/conjugatepro.html docs/index.html
 ```
 
-Then commit and push. GitHub Pages serves `/docs` on `main`; there is no build
-step in CI. See [artifact/NOTES.md](artifact/NOTES.md) for how the single-file
-build differs from the Flask app.
+That writes both `docs/index.html` (the Pages site) and
+`artifact/conjugatepro.html` (the Claude Artifact). Then commit and push —
+GitHub Pages serves `/docs` on `main`, with no build step in CI. See
+[artifact/NOTES.md](artifact/NOTES.md) for how the two outputs differ and how
+the single-file build differs from the Flask app.

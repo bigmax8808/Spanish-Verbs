@@ -33,6 +33,43 @@ VERBS_JSON = APP / "data" / "verbs.json"
 SHELL = HERE / "shell.html"
 TAILWIND_CSS = HERE / "tailwind.css"
 OUTPUT = HERE / "conjugatepro.html"
+PAGES_OUTPUT = APP / "docs" / "index.html"
+
+# The two outputs hold the same page but are wrapped differently, because their
+# hosts differ:
+#
+#   conjugatepro.html — a *fragment*. Claude Artifacts supplies the surrounding
+#     <!doctype>/<html>/<head>/<body> at publish time, and rejects a file that
+#     brings its own. That skeleton is also where the viewport meta comes from.
+#   docs/index.html   — a complete document, because GitHub Pages serves the
+#     file verbatim with no wrapper. Without the viewport meta, mobile Safari
+#     falls back to a 980px layout viewport and scales the whole page down to
+#     roughly 40% on a phone.
+#
+# No CSS reset is needed here: Tailwind's preflight is already inlined.
+# The fragment opens with <title> and one <style> block, then goes straight to
+# markup, so the end of that block is where <head> closes.
+DOCUMENT_HEAD = """<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+"""
+HEAD_SPLIT = "</style>"
+DOCUMENT_MIDDLE = "</style>\n</head>\n<body>"
+DOCUMENT_TAIL = "\n</body>\n</html>\n"
+
+
+def as_document(fragment):
+    """Wrap the Artifact fragment as a standalone document for GitHub Pages."""
+    if fragment.count(HEAD_SPLIT) != 1:
+        sys.exit(
+            f"BUILD FAILED — expected exactly one {HEAD_SPLIT!r} in the shell, "
+            f"found {fragment.count(HEAD_SPLIT)}. The head/body split point in "
+            f"shell.html moved; update as_document() before rebuilding."
+        )
+    head, body = fragment.split(HEAD_SPLIT, 1)
+    return DOCUMENT_HEAD + head + DOCUMENT_MIDDLE + body + DOCUMENT_TAIL
 
 
 # --- Patches ---------------------------------------------------------------
@@ -742,7 +779,12 @@ def main():
         html = html.replace(marker, replacement)
 
     OUTPUT.write_text(html, encoding="utf-8")
-    print(f"Wrote {OUTPUT} ({len(html.encode('utf-8')) / 1024:.0f} KB)")
+    print(f"Wrote {OUTPUT} ({len(html.encode('utf-8')) / 1024:.0f} KB)  [Artifact fragment]")
+
+    document = as_document(html)
+    PAGES_OUTPUT.write_text(document, encoding="utf-8")
+    print(f"Wrote {PAGES_OUTPUT} ({len(document.encode('utf-8')) / 1024:.0f} KB)  [Pages document]")
+
     print(f"  verbs: {len(verbs['verbs'])}   subjects: {len(verbs['subjects'])}")
 
 

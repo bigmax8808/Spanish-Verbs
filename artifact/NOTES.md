@@ -10,13 +10,23 @@ directory only reads from it.
 
 ```bash
 python3 artifact/build.py
-cp artifact/conjugatepro.html docs/index.html
 ```
 
-Writes `conjugatepro.html` (~98 KB, self-contained). Republish that same file
-path so the Claude Artifact keeps its existing URL; the `cp` is what updates
-the Pages site, which serves `/docs` on `main` with no build step in CI. The
-copy in `docs/` is build output — don't hand-edit it either.
+Writes **two** files, same page, ~98 KB each:
+
+- `artifact/conjugatepro.html` — a *fragment*, no `<!doctype>`/`<html>`/`<head>`/
+  `<body>`. Claude Artifacts supplies those at publish time and rejects a file
+  that brings its own. Republish this same path so the Artifact keeps its URL.
+- `docs/index.html` — the same content as a complete document. GitHub Pages
+  serves files verbatim with no wrapper, so this one carries its own `<head>`,
+  including `<meta charset>` and the viewport meta. **Without the viewport meta
+  mobile Safari falls back to a 980px layout viewport and renders the whole
+  page at roughly 40% size** — that was a real bug, not a hypothetical.
+
+Both are build output. Don't hand-edit either; change `static/app.js`,
+`shell.html`, or `build.py` and rebuild. The document wrapper lives in
+`as_document()`, which splits the fragment at its single `</style>` and fails
+loudly if that split point ever moves.
 
 If `static/app.js` has changed in a way the build doesn't recognise, the build
 **fails with the name of the patch that no longer matches** rather than emitting

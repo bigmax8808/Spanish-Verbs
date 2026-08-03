@@ -36,12 +36,16 @@ Architecture:
 ## Web build and deployment
 
 ```bash
-python3 artifact/build.py          # writes artifact/conjugatepro.html
-cp artifact/conjugatepro.html docs/index.html
+python3 artifact/build.py   # writes BOTH outputs
 ```
+
+One build, two outputs, same page wrapped differently for two hosts:
+
+- **`artifact/conjugatepro.html`** — a fragment with no `<!doctype>`/`<html>`/`<head>`/`<body>`. Claude Artifacts supplies those at publish time and rejects a file carrying its own.
+- **`docs/index.html`** — a complete document, because GitHub Pages serves files verbatim. It must keep its own `<meta charset>` and `<meta name="viewport">`; without the viewport meta, mobile Safari uses a 980px layout viewport and renders the page at ~40% size on a phone.
 
 `artifact/build.py` holds every difference from the local app as a named patch, and **fails loudly** if `static/app.js` changed in a way a patch no longer matches, rather than emitting a half-converted file. The web build inlines the verb data, swaps macOS `say` for browser `speechSynthesis`, drops the Claude tips entirely, and is bilingual (English/Spanish). Full detail in [artifact/NOTES.md](artifact/NOTES.md).
 
 Deployment is **GitHub Pages serving `/docs` on `main`** — no GitHub Actions workflow, no build step in CI. Pushing an updated `docs/index.html` is the deploy. The site is at https://bigmax8808.github.io/Spanish-Verbs/.
 
-`docs/index.html` is build output. Don't hand-edit it, and don't edit `artifact/conjugatepro.html` either — change `static/app.js` (or `artifact/shell.html` / `build.py`) and rebuild.
+Both outputs are build artifacts. Don't hand-edit either — change `static/app.js` (or `artifact/shell.html` / `build.py`) and rebuild.
