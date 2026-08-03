@@ -1,0 +1,2237 @@
+{
+  "subjects": [
+    "Yo",
+    "Tú",
+    "Él/Ella/Usted",
+    "Nosotros",
+    "Ellos/Ellas/Ustedes"
+  ],
+  "verbs": [
+    {
+      "infinitive": "hablar",
+      "meaning": "to speak",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "hablo",
+          "Tú": "hablas",
+          "Él/Ella/Usted": "habla",
+          "Nosotros": "hablamos",
+          "Ellos/Ellas/Ustedes": "hablan"
+        },
+        "Preterite": {
+          "Yo": "hablé",
+          "Tú": "hablaste",
+          "Él/Ella/Usted": "habló",
+          "Nosotros": "hablamos",
+          "Ellos/Ellas/Ustedes": "hablaron"
+        }
+      }
+    },
+    {
+      "infinitive": "estudiar",
+      "meaning": "to study",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "estudio",
+          "Tú": "estudias",
+          "Él/Ella/Usted": "estudia",
+          "Nosotros": "estudiamos",
+          "Ellos/Ellas/Ustedes": "estudian"
+        },
+        "Preterite": {
+          "Yo": "estudié",
+          "Tú": "estudiaste",
+          "Él/Ella/Usted": "estudió",
+          "Nosotros": "estudiamos",
+          "Ellos/Ellas/Ustedes": "estudiaron"
+        }
+      }
+    },
+    {
+      "infinitive": "comer",
+      "meaning": "to eat",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "como",
+          "Tú": "comes",
+          "Él/Ella/Usted": "come",
+          "Nosotros": "comemos",
+          "Ellos/Ellas/Ustedes": "comen"
+        },
+        "Preterite": {
+          "Yo": "comí",
+          "Tú": "comiste",
+          "Él/Ella/Usted": "comió",
+          "Nosotros": "comimos",
+          "Ellos/Ellas/Ustedes": "comieron"
+        }
+      }
+    },
+    {
+      "infinitive": "beber",
+      "meaning": "to drink",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "bebo",
+          "Tú": "bebes",
+          "Él/Ella/Usted": "bebe",
+          "Nosotros": "bebemos",
+          "Ellos/Ellas/Ustedes": "beben"
+        },
+        "Preterite": {
+          "Yo": "bebí",
+          "Tú": "bebiste",
+          "Él/Ella/Usted": "bebió",
+          "Nosotros": "bebimos",
+          "Ellos/Ellas/Ustedes": "bebieron"
+        }
+      }
+    },
+    {
+      "infinitive": "vivir",
+      "meaning": "to live",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "vivo",
+          "Tú": "vives",
+          "Él/Ella/Usted": "vive",
+          "Nosotros": "vivimos",
+          "Ellos/Ellas/Ustedes": "viven"
+        },
+        "Preterite": {
+          "Yo": "viví",
+          "Tú": "viviste",
+          "Él/Ella/Usted": "vivió",
+          "Nosotros": "vivimos",
+          "Ellos/Ellas/Ustedes": "vivieron"
+        }
+      }
+    },
+    {
+      "infinitive": "escribir",
+      "meaning": "to write",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "escribo",
+          "Tú": "escribes",
+          "Él/Ella/Usted": "escribe",
+          "Nosotros": "escribimos",
+          "Ellos/Ellas/Ustedes": "escriben"
+        },
+        "Preterite": {
+          "Yo": "escribí",
+          "Tú": "escribiste",
+          "Él/Ella/Usted": "escribió",
+          "Nosotros": "escribimos",
+          "Ellos/Ellas/Ustedes": "escribieron"
+        }
+      }
+    },
+    {
+      "infinitive": "trabajar",
+      "meaning": "to work",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "trabajo",
+          "Tú": "trabajas",
+          "Él/Ella/Usted": "trabaja",
+          "Nosotros": "trabajamos",
+          "Ellos/Ellas/Ustedes": "trabajan"
+        },
+        "Preterite": {
+          "Yo": "trabajé",
+          "Tú": "trabajaste",
+          "Él/Ella/Usted": "trabajó",
+          "Nosotros": "trabajamos",
+          "Ellos/Ellas/Ustedes": "trabajaron"
+        }
+      }
+    },
+    {
+      "infinitive": "aprender",
+      "meaning": "to learn",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "aprendo",
+          "Tú": "aprendes",
+          "Él/Ella/Usted": "aprende",
+          "Nosotros": "aprendemos",
+          "Ellos/Ellas/Ustedes": "aprenden"
+        },
+        "Preterite": {
+          "Yo": "aprendí",
+          "Tú": "aprendiste",
+          "Él/Ella/Usted": "aprendió",
+          "Nosotros": "aprendimos",
+          "Ellos/Ellas/Ustedes": "aprendieron"
+        }
+      }
+    },
+    {
+      "infinitive": "abrir",
+      "meaning": "to open",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "abro",
+          "Tú": "abres",
+          "Él/Ella/Usted": "abre",
+          "Nosotros": "abrimos",
+          "Ellos/Ellas/Ustedes": "abren"
+        },
+        "Preterite": {
+          "Yo": "abrí",
+          "Tú": "abriste",
+          "Él/Ella/Usted": "abrió",
+          "Nosotros": "abrimos",
+          "Ellos/Ellas/Ustedes": "abrieron"
+        }
+      }
+    },
+    {
+      "infinitive": "correr",
+      "meaning": "to run",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "corro",
+          "Tú": "corres",
+          "Él/Ella/Usted": "corre",
+          "Nosotros": "corremos",
+          "Ellos/Ellas/Ustedes": "corren"
+        },
+        "Preterite": {
+          "Yo": "corrí",
+          "Tú": "corriste",
+          "Él/Ella/Usted": "corrió",
+          "Nosotros": "corrimos",
+          "Ellos/Ellas/Ustedes": "corrieron"
+        }
+      }
+    },
+    {
+      "infinitive": "bailar",
+      "meaning": "to dance",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "bailo",
+          "Tú": "bailas",
+          "Él/Ella/Usted": "baila",
+          "Nosotros": "bailamos",
+          "Ellos/Ellas/Ustedes": "bailan"
+        },
+        "Preterite": {
+          "Yo": "bailé",
+          "Tú": "bailaste",
+          "Él/Ella/Usted": "bailó",
+          "Nosotros": "bailamos",
+          "Ellos/Ellas/Ustedes": "bailaron"
+        }
+      }
+    },
+    {
+      "infinitive": "caminar",
+      "meaning": "to walk",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "camino",
+          "Tú": "caminas",
+          "Él/Ella/Usted": "camina",
+          "Nosotros": "caminamos",
+          "Ellos/Ellas/Ustedes": "caminan"
+        },
+        "Preterite": {
+          "Yo": "caminé",
+          "Tú": "caminaste",
+          "Él/Ella/Usted": "caminó",
+          "Nosotros": "caminamos",
+          "Ellos/Ellas/Ustedes": "caminaron"
+        }
+      }
+    },
+    {
+      "infinitive": "cantar",
+      "meaning": "to sing",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "canto",
+          "Tú": "cantas",
+          "Él/Ella/Usted": "canta",
+          "Nosotros": "cantamos",
+          "Ellos/Ellas/Ustedes": "cantan"
+        },
+        "Preterite": {
+          "Yo": "canté",
+          "Tú": "cantaste",
+          "Él/Ella/Usted": "cantó",
+          "Nosotros": "cantamos",
+          "Ellos/Ellas/Ustedes": "cantaron"
+        }
+      }
+    },
+    {
+      "infinitive": "comprar",
+      "meaning": "to buy",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "compro",
+          "Tú": "compras",
+          "Él/Ella/Usted": "compra",
+          "Nosotros": "compramos",
+          "Ellos/Ellas/Ustedes": "compran"
+        },
+        "Preterite": {
+          "Yo": "compré",
+          "Tú": "compraste",
+          "Él/Ella/Usted": "compró",
+          "Nosotros": "compramos",
+          "Ellos/Ellas/Ustedes": "compraron"
+        }
+      }
+    },
+    {
+      "infinitive": "vender",
+      "meaning": "to sell",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "vendo",
+          "Tú": "vendes",
+          "Él/Ella/Usted": "vende",
+          "Nosotros": "vendemos",
+          "Ellos/Ellas/Ustedes": "venden"
+        },
+        "Preterite": {
+          "Yo": "vendí",
+          "Tú": "vendiste",
+          "Él/Ella/Usted": "vendió",
+          "Nosotros": "vendimos",
+          "Ellos/Ellas/Ustedes": "vendieron"
+        }
+      }
+    },
+    {
+      "infinitive": "recibir",
+      "meaning": "to receive",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "recibo",
+          "Tú": "recibes",
+          "Él/Ella/Usted": "recibe",
+          "Nosotros": "recibimos",
+          "Ellos/Ellas/Ustedes": "reciben"
+        },
+        "Preterite": {
+          "Yo": "recibí",
+          "Tú": "recibiste",
+          "Él/Ella/Usted": "recibió",
+          "Nosotros": "recibimos",
+          "Ellos/Ellas/Ustedes": "recibieron"
+        }
+      }
+    },
+    {
+      "infinitive": "escuchar",
+      "meaning": "to listen",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "escucho",
+          "Tú": "escuchas",
+          "Él/Ella/Usted": "escucha",
+          "Nosotros": "escuchamos",
+          "Ellos/Ellas/Ustedes": "escuchan"
+        },
+        "Preterite": {
+          "Yo": "escuché",
+          "Tú": "escuchaste",
+          "Él/Ella/Usted": "escuchó",
+          "Nosotros": "escuchamos",
+          "Ellos/Ellas/Ustedes": "escucharon"
+        }
+      }
+    },
+    {
+      "infinitive": "mirar",
+      "meaning": "to watch",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "miro",
+          "Tú": "miras",
+          "Él/Ella/Usted": "mira",
+          "Nosotros": "miramos",
+          "Ellos/Ellas/Ustedes": "miran"
+        },
+        "Preterite": {
+          "Yo": "miré",
+          "Tú": "miraste",
+          "Él/Ella/Usted": "miró",
+          "Nosotros": "miramos",
+          "Ellos/Ellas/Ustedes": "miraron"
+        }
+      }
+    },
+    {
+      "infinitive": "viajar",
+      "meaning": "to travel",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "viajo",
+          "Tú": "viajas",
+          "Él/Ella/Usted": "viaja",
+          "Nosotros": "viajamos",
+          "Ellos/Ellas/Ustedes": "viajan"
+        },
+        "Preterite": {
+          "Yo": "viajé",
+          "Tú": "viajaste",
+          "Él/Ella/Usted": "viajó",
+          "Nosotros": "viajamos",
+          "Ellos/Ellas/Ustedes": "viajaron"
+        }
+      }
+    },
+    {
+      "infinitive": "ayudar",
+      "meaning": "to help",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "ayudo",
+          "Tú": "ayudas",
+          "Él/Ella/Usted": "ayuda",
+          "Nosotros": "ayudamos",
+          "Ellos/Ellas/Ustedes": "ayudan"
+        },
+        "Preterite": {
+          "Yo": "ayudé",
+          "Tú": "ayudaste",
+          "Él/Ella/Usted": "ayudó",
+          "Nosotros": "ayudamos",
+          "Ellos/Ellas/Ustedes": "ayudaron"
+        }
+      }
+    },
+    {
+      "infinitive": "comprender",
+      "meaning": "to understand",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "comprendo",
+          "Tú": "comprendes",
+          "Él/Ella/Usted": "comprende",
+          "Nosotros": "comprendemos",
+          "Ellos/Ellas/Ustedes": "comprenden"
+        },
+        "Preterite": {
+          "Yo": "comprendí",
+          "Tú": "comprendiste",
+          "Él/Ella/Usted": "comprendió",
+          "Nosotros": "comprendimos",
+          "Ellos/Ellas/Ustedes": "comprendieron"
+        }
+      }
+    },
+    {
+      "infinitive": "desayunar",
+      "meaning": "to eat breakfast",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "desayuno",
+          "Tú": "desayunas",
+          "Él/Ella/Usted": "desayuna",
+          "Nosotros": "desayunamos",
+          "Ellos/Ellas/Ustedes": "desayunan"
+        },
+        "Preterite": {
+          "Yo": "desayuné",
+          "Tú": "desayunaste",
+          "Él/Ella/Usted": "desayunó",
+          "Nosotros": "desayunamos",
+          "Ellos/Ellas/Ustedes": "desayunaron"
+        }
+      }
+    },
+    {
+      "infinitive": "cenar",
+      "meaning": "to eat dinner",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "ceno",
+          "Tú": "cenas",
+          "Él/Ella/Usted": "cena",
+          "Nosotros": "cenamos",
+          "Ellos/Ellas/Ustedes": "cenan"
+        },
+        "Preterite": {
+          "Yo": "cené",
+          "Tú": "cenaste",
+          "Él/Ella/Usted": "cenó",
+          "Nosotros": "cenamos",
+          "Ellos/Ellas/Ustedes": "cenaron"
+        }
+      }
+    },
+    {
+      "infinitive": "limpiar",
+      "meaning": "to clean",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "limpio",
+          "Tú": "limpias",
+          "Él/Ella/Usted": "limpia",
+          "Nosotros": "limpiamos",
+          "Ellos/Ellas/Ustedes": "limpian"
+        },
+        "Preterite": {
+          "Yo": "limpié",
+          "Tú": "limpiaste",
+          "Él/Ella/Usted": "limpió",
+          "Nosotros": "limpiamos",
+          "Ellos/Ellas/Ustedes": "limpiaron"
+        }
+      }
+    },
+    {
+      "infinitive": "lavar",
+      "meaning": "to wash",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "lavo",
+          "Tú": "lavas",
+          "Él/Ella/Usted": "lava",
+          "Nosotros": "lavamos",
+          "Ellos/Ellas/Ustedes": "lavan"
+        },
+        "Preterite": {
+          "Yo": "lavé",
+          "Tú": "lavaste",
+          "Él/Ella/Usted": "lavó",
+          "Nosotros": "lavamos",
+          "Ellos/Ellas/Ustedes": "lavaron"
+        }
+      }
+    },
+    {
+      "infinitive": "llamar",
+      "meaning": "to call",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "llamo",
+          "Tú": "llamas",
+          "Él/Ella/Usted": "llama",
+          "Nosotros": "llamamos",
+          "Ellos/Ellas/Ustedes": "llaman"
+        },
+        "Preterite": {
+          "Yo": "llamé",
+          "Tú": "llamaste",
+          "Él/Ella/Usted": "llamó",
+          "Nosotros": "llamamos",
+          "Ellos/Ellas/Ustedes": "llamaron"
+        }
+      }
+    },
+    {
+      "infinitive": "llevar",
+      "meaning": "to carry",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "llevo",
+          "Tú": "llevas",
+          "Él/Ella/Usted": "lleva",
+          "Nosotros": "llevamos",
+          "Ellos/Ellas/Ustedes": "llevan"
+        },
+        "Preterite": {
+          "Yo": "llevé",
+          "Tú": "llevaste",
+          "Él/Ella/Usted": "llevó",
+          "Nosotros": "llevamos",
+          "Ellos/Ellas/Ustedes": "llevaron"
+        }
+      }
+    },
+    {
+      "infinitive": "mandar",
+      "meaning": "to send",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "mando",
+          "Tú": "mandas",
+          "Él/Ella/Usted": "manda",
+          "Nosotros": "mandamos",
+          "Ellos/Ellas/Ustedes": "mandan"
+        },
+        "Preterite": {
+          "Yo": "mandé",
+          "Tú": "mandaste",
+          "Él/Ella/Usted": "mandó",
+          "Nosotros": "mandamos",
+          "Ellos/Ellas/Ustedes": "mandaron"
+        }
+      }
+    },
+    {
+      "infinitive": "usar",
+      "meaning": "to use",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "uso",
+          "Tú": "usas",
+          "Él/Ella/Usted": "usa",
+          "Nosotros": "usamos",
+          "Ellos/Ellas/Ustedes": "usan"
+        },
+        "Preterite": {
+          "Yo": "usé",
+          "Tú": "usaste",
+          "Él/Ella/Usted": "usó",
+          "Nosotros": "usamos",
+          "Ellos/Ellas/Ustedes": "usaron"
+        }
+      }
+    },
+    {
+      "infinitive": "visitar",
+      "meaning": "to visit",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "visito",
+          "Tú": "visitas",
+          "Él/Ella/Usted": "visita",
+          "Nosotros": "visitamos",
+          "Ellos/Ellas/Ustedes": "visitan"
+        },
+        "Preterite": {
+          "Yo": "visité",
+          "Tú": "visitaste",
+          "Él/Ella/Usted": "visitó",
+          "Nosotros": "visitamos",
+          "Ellos/Ellas/Ustedes": "visitaron"
+        }
+      }
+    },
+    {
+      "infinitive": "esperar",
+      "meaning": "to wait",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "espero",
+          "Tú": "esperas",
+          "Él/Ella/Usted": "espera",
+          "Nosotros": "esperamos",
+          "Ellos/Ellas/Ustedes": "esperan"
+        },
+        "Preterite": {
+          "Yo": "esperé",
+          "Tú": "esperaste",
+          "Él/Ella/Usted": "esperó",
+          "Nosotros": "esperamos",
+          "Ellos/Ellas/Ustedes": "esperaron"
+        }
+      }
+    },
+    {
+      "infinitive": "preguntar",
+      "meaning": "to ask",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "pregunto",
+          "Tú": "preguntas",
+          "Él/Ella/Usted": "pregunta",
+          "Nosotros": "preguntamos",
+          "Ellos/Ellas/Ustedes": "preguntan"
+        },
+        "Preterite": {
+          "Yo": "pregunté",
+          "Tú": "preguntaste",
+          "Él/Ella/Usted": "preguntó",
+          "Nosotros": "preguntamos",
+          "Ellos/Ellas/Ustedes": "preguntaron"
+        }
+      }
+    },
+    {
+      "infinitive": "responder",
+      "meaning": "to answer",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "respondo",
+          "Tú": "respondes",
+          "Él/Ella/Usted": "responde",
+          "Nosotros": "respondemos",
+          "Ellos/Ellas/Ustedes": "responden"
+        },
+        "Preterite": {
+          "Yo": "respondí",
+          "Tú": "respondiste",
+          "Él/Ella/Usted": "respondió",
+          "Nosotros": "respondimos",
+          "Ellos/Ellas/Ustedes": "respondieron"
+        }
+      }
+    },
+    {
+      "infinitive": "descansar",
+      "meaning": "to rest",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "descanso",
+          "Tú": "descansas",
+          "Él/Ella/Usted": "descansa",
+          "Nosotros": "descansamos",
+          "Ellos/Ellas/Ustedes": "descansan"
+        },
+        "Preterite": {
+          "Yo": "descansé",
+          "Tú": "descansaste",
+          "Él/Ella/Usted": "descansó",
+          "Nosotros": "descansamos",
+          "Ellos/Ellas/Ustedes": "descansaron"
+        }
+      }
+    },
+    {
+      "infinitive": "ganar",
+      "meaning": "to win",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "gano",
+          "Tú": "ganas",
+          "Él/Ella/Usted": "gana",
+          "Nosotros": "ganamos",
+          "Ellos/Ellas/Ustedes": "ganan"
+        },
+        "Preterite": {
+          "Yo": "gané",
+          "Tú": "ganaste",
+          "Él/Ella/Usted": "ganó",
+          "Nosotros": "ganamos",
+          "Ellos/Ellas/Ustedes": "ganaron"
+        }
+      }
+    },
+    {
+      "infinitive": "subir",
+      "meaning": "to go up",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "subo",
+          "Tú": "subes",
+          "Él/Ella/Usted": "sube",
+          "Nosotros": "subimos",
+          "Ellos/Ellas/Ustedes": "suben"
+        },
+        "Preterite": {
+          "Yo": "subí",
+          "Tú": "subiste",
+          "Él/Ella/Usted": "subió",
+          "Nosotros": "subimos",
+          "Ellos/Ellas/Ustedes": "subieron"
+        }
+      }
+    },
+    {
+      "infinitive": "asistir",
+      "meaning": "to attend",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "asisto",
+          "Tú": "asistes",
+          "Él/Ella/Usted": "asiste",
+          "Nosotros": "asistimos",
+          "Ellos/Ellas/Ustedes": "asisten"
+        },
+        "Preterite": {
+          "Yo": "asistí",
+          "Tú": "asististe",
+          "Él/Ella/Usted": "asistió",
+          "Nosotros": "asistimos",
+          "Ellos/Ellas/Ustedes": "asistieron"
+        }
+      }
+    },
+    {
+      "infinitive": "decidir",
+      "meaning": "to decide",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "decido",
+          "Tú": "decides",
+          "Él/Ella/Usted": "decide",
+          "Nosotros": "decidimos",
+          "Ellos/Ellas/Ustedes": "deciden"
+        },
+        "Preterite": {
+          "Yo": "decidí",
+          "Tú": "decidiste",
+          "Él/Ella/Usted": "decidió",
+          "Nosotros": "decidimos",
+          "Ellos/Ellas/Ustedes": "decidieron"
+        }
+      }
+    },
+    {
+      "infinitive": "romper",
+      "meaning": "to break",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "rompo",
+          "Tú": "rompes",
+          "Él/Ella/Usted": "rompe",
+          "Nosotros": "rompemos",
+          "Ellos/Ellas/Ustedes": "rompen"
+        },
+        "Preterite": {
+          "Yo": "rompí",
+          "Tú": "rompiste",
+          "Él/Ella/Usted": "rompió",
+          "Nosotros": "rompimos",
+          "Ellos/Ellas/Ustedes": "rompieron"
+        }
+      }
+    },
+    {
+      "infinitive": "aburrir",
+      "meaning": "to bore",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "aburro",
+          "Tú": "aburres",
+          "Él/Ella/Usted": "aburre",
+          "Nosotros": "aburrimos",
+          "Ellos/Ellas/Ustedes": "aburren"
+        },
+        "Preterite": {
+          "Yo": "aburrí",
+          "Tú": "aburriste",
+          "Él/Ella/Usted": "aburrió",
+          "Nosotros": "aburrimos",
+          "Ellos/Ellas/Ustedes": "aburrieron"
+        }
+      }
+    },
+    {
+      "infinitive": "deber",
+      "meaning": "should/must",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "debo",
+          "Tú": "debes",
+          "Él/Ella/Usted": "debe",
+          "Nosotros": "debemos",
+          "Ellos/Ellas/Ustedes": "deben"
+        },
+        "Preterite": {
+          "Yo": "debí",
+          "Tú": "debiste",
+          "Él/Ella/Usted": "debió",
+          "Nosotros": "debimos",
+          "Ellos/Ellas/Ustedes": "debieron"
+        }
+      }
+    },
+    {
+      "infinitive": "prometer",
+      "meaning": "to promise",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "prometo",
+          "Tú": "prometes",
+          "Él/Ella/Usted": "promete",
+          "Nosotros": "prometemos",
+          "Ellos/Ellas/Ustedes": "prometen"
+        },
+        "Preterite": {
+          "Yo": "prometí",
+          "Tú": "prometiste",
+          "Él/Ella/Usted": "prometió",
+          "Nosotros": "prometimos",
+          "Ellos/Ellas/Ustedes": "prometieron"
+        }
+      }
+    },
+    {
+      "infinitive": "descubrir",
+      "meaning": "to discover",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "descubro",
+          "Tú": "descubres",
+          "Él/Ella/Usted": "descubre",
+          "Nosotros": "descubrimos",
+          "Ellos/Ellas/Ustedes": "descubren"
+        },
+        "Preterite": {
+          "Yo": "descubrí",
+          "Tú": "descubriste",
+          "Él/Ella/Usted": "descubrió",
+          "Nosotros": "descubrimos",
+          "Ellos/Ellas/Ustedes": "descubrieron"
+        }
+      }
+    },
+    {
+      "infinitive": "unir",
+      "meaning": "to unite",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "uno",
+          "Tú": "unes",
+          "Él/Ella/Usted": "une",
+          "Nosotros": "unimos",
+          "Ellos/Ellas/Ustedes": "unen"
+        },
+        "Preterite": {
+          "Yo": "uní",
+          "Tú": "uniste",
+          "Él/Ella/Usted": "unió",
+          "Nosotros": "unimos",
+          "Ellos/Ellas/Ustedes": "unieron"
+        }
+      }
+    },
+    {
+      "infinitive": "amar",
+      "meaning": "to love",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "amo",
+          "Tú": "amas",
+          "Él/Ella/Usted": "ama",
+          "Nosotros": "amamos",
+          "Ellos/Ellas/Ustedes": "aman"
+        },
+        "Preterite": {
+          "Yo": "amé",
+          "Tú": "amaste",
+          "Él/Ella/Usted": "amó",
+          "Nosotros": "amamos",
+          "Ellos/Ellas/Ustedes": "amaron"
+        }
+      }
+    },
+    {
+      "infinitive": "pagar",
+      "meaning": "to pay",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "pago",
+          "Tú": "pagas",
+          "Él/Ella/Usted": "paga",
+          "Nosotros": "pagamos",
+          "Ellos/Ellas/Ustedes": "pagan"
+        },
+        "Preterite": {
+          "Yo": "pagué",
+          "Tú": "pagaste",
+          "Él/Ella/Usted": "pagó",
+          "Nosotros": "pagamos",
+          "Ellos/Ellas/Ustedes": "pagaron"
+        }
+      }
+    },
+    {
+      "infinitive": "tocar",
+      "meaning": "to touch/play instrument",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "toco",
+          "Tú": "tocas",
+          "Él/Ella/Usted": "toca",
+          "Nosotros": "tocamos",
+          "Ellos/Ellas/Ustedes": "tocan"
+        },
+        "Preterite": {
+          "Yo": "toqué",
+          "Tú": "tocaste",
+          "Él/Ella/Usted": "tocó",
+          "Nosotros": "tocamos",
+          "Ellos/Ellas/Ustedes": "tocaron"
+        }
+      }
+    },
+    {
+      "infinitive": "buscar",
+      "meaning": "to look for",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "busco",
+          "Tú": "buscas",
+          "Él/Ella/Usted": "busca",
+          "Nosotros": "buscamos",
+          "Ellos/Ellas/Ustedes": "buscan"
+        },
+        "Preterite": {
+          "Yo": "busqué",
+          "Tú": "buscaste",
+          "Él/Ella/Usted": "buscó",
+          "Nosotros": "buscamos",
+          "Ellos/Ellas/Ustedes": "buscaron"
+        }
+      }
+    },
+    {
+      "infinitive": "sacar",
+      "meaning": "to take out",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "saco",
+          "Tú": "sacas",
+          "Él/Ella/Usted": "saca",
+          "Nosotros": "sacamos",
+          "Ellos/Ellas/Ustedes": "sacan"
+        },
+        "Preterite": {
+          "Yo": "saqué",
+          "Tú": "sacaste",
+          "Él/Ella/Usted": "sacó",
+          "Nosotros": "sacamos",
+          "Ellos/Ellas/Ustedes": "sacaron"
+        }
+      }
+    },
+    {
+      "infinitive": "llegar",
+      "meaning": "to arrive",
+      "category": "Regular ar/er/ir",
+      "conjugations": {
+        "Present": {
+          "Yo": "llego",
+          "Tú": "llegas",
+          "Él/Ella/Usted": "llega",
+          "Nosotros": "llegamos",
+          "Ellos/Ellas/Ustedes": "llegan"
+        },
+        "Preterite": {
+          "Yo": "llegué",
+          "Tú": "llegaste",
+          "Él/Ella/Usted": "llegó",
+          "Nosotros": "llegamos",
+          "Ellos/Ellas/Ustedes": "llegaron"
+        }
+      }
+    },
+    {
+      "infinitive": "ser",
+      "meaning": "to be (essential)",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "soy",
+          "Tú": "eres",
+          "Él/Ella/Usted": "es",
+          "Nosotros": "somos",
+          "Ellos/Ellas/Ustedes": "son"
+        },
+        "Preterite": {
+          "Yo": "fui",
+          "Tú": "fuiste",
+          "Él/Ella/Usted": "fue",
+          "Nosotros": "fuimos",
+          "Ellos/Ellas/Ustedes": "fueron"
+        }
+      }
+    },
+    {
+      "infinitive": "ir",
+      "meaning": "to go",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "voy",
+          "Tú": "vas",
+          "Él/Ella/Usted": "va",
+          "Nosotros": "vamos",
+          "Ellos/Ellas/Ustedes": "van"
+        },
+        "Preterite": {
+          "Yo": "fui",
+          "Tú": "fuiste",
+          "Él/Ella/Usted": "fue",
+          "Nosotros": "fuimos",
+          "Ellos/Ellas/Ustedes": "fueron"
+        }
+      }
+    },
+    {
+      "infinitive": "estar",
+      "meaning": "to be (location/state)",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "estoy",
+          "Tú": "estás",
+          "Él/Ella/Usted": "está",
+          "Nosotros": "estamos",
+          "Ellos/Ellas/Ustedes": "están"
+        },
+        "Preterite": {
+          "Yo": "estuve",
+          "Tú": "estuviste",
+          "Él/Ella/Usted": "estuvo",
+          "Nosotros": "estuvimos",
+          "Ellos/Ellas/Ustedes": "estuvieron"
+        }
+      }
+    },
+    {
+      "infinitive": "tener",
+      "meaning": "to have",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "tengo",
+          "Tú": "tienes",
+          "Él/Ella/Usted": "tiene",
+          "Nosotros": "tenemos",
+          "Ellos/Ellas/Ustedes": "tienen"
+        },
+        "Preterite": {
+          "Yo": "tuve",
+          "Tú": "tuviste",
+          "Él/Ella/Usted": "tuvo",
+          "Nosotros": "tuvimos",
+          "Ellos/Ellas/Ustedes": "tuvieron"
+        }
+      }
+    },
+    {
+      "infinitive": "hacer",
+      "meaning": "to do/make",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "hago",
+          "Tú": "haces",
+          "Él/Ella/Usted": "hace",
+          "Nosotros": "hacemos",
+          "Ellos/Ellas/Ustedes": "hacen"
+        },
+        "Preterite": {
+          "Yo": "hice",
+          "Tú": "hiciste",
+          "Él/Ella/Usted": "hizo",
+          "Nosotros": "hicimos",
+          "Ellos/Ellas/Ustedes": "hicieron"
+        }
+      }
+    },
+    {
+      "infinitive": "poder",
+      "meaning": "to be able to",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "puedo",
+          "Tú": "puedes",
+          "Él/Ella/Usted": "puede",
+          "Nosotros": "podemos",
+          "Ellos/Ellas/Ustedes": "pueden"
+        },
+        "Preterite": {
+          "Yo": "pude",
+          "Tú": "pudiste",
+          "Él/Ella/Usted": "pudo",
+          "Nosotros": "pudimos",
+          "Ellos/Ellas/Ustedes": "pudieron"
+        }
+      }
+    },
+    {
+      "infinitive": "decir",
+      "meaning": "to say/tell",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "digo",
+          "Tú": "dices",
+          "Él/Ella/Usted": "dice",
+          "Nosotros": "decimos",
+          "Ellos/Ellas/Ustedes": "dicen"
+        },
+        "Preterite": {
+          "Yo": "dije",
+          "Tú": "dijiste",
+          "Él/Ella/Usted": "dijo",
+          "Nosotros": "dijimos",
+          "Ellos/Ellas/Ustedes": "dijeron"
+        }
+      }
+    },
+    {
+      "infinitive": "querer",
+      "meaning": "to want",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "quiero",
+          "Tú": "quieres",
+          "Él/Ella/Usted": "quiere",
+          "Nosotros": "queremos",
+          "Ellos/Ellas/Ustedes": "quieren"
+        },
+        "Preterite": {
+          "Yo": "quise",
+          "Tú": "quisiste",
+          "Él/Ella/Usted": "quiso",
+          "Nosotros": "quisimos",
+          "Ellos/Ellas/Ustedes": "quisieron"
+        }
+      }
+    },
+    {
+      "infinitive": "saber",
+      "meaning": "to know (info)",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "sé",
+          "Tú": "sabes",
+          "Él/Ella/Usted": "sabe",
+          "Nosotros": "sabemos",
+          "Ellos/Ellas/Ustedes": "saben"
+        },
+        "Preterite": {
+          "Yo": "supe",
+          "Tú": "supiste",
+          "Él/Ella/Usted": "supo",
+          "Nosotros": "supimos",
+          "Ellos/Ellas/Ustedes": "supieron"
+        }
+      }
+    },
+    {
+      "infinitive": "dar",
+      "meaning": "to give",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "doy",
+          "Tú": "das",
+          "Él/Ella/Usted": "da",
+          "Nosotros": "damos",
+          "Ellos/Ellas/Ustedes": "dan"
+        },
+        "Preterite": {
+          "Yo": "di",
+          "Tú": "diste",
+          "Él/Ella/Usted": "dio",
+          "Nosotros": "dimos",
+          "Ellos/Ellas/Ustedes": "dieron"
+        }
+      }
+    },
+    {
+      "infinitive": "ver",
+      "meaning": "to see",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "veo",
+          "Tú": "ves",
+          "Él/Ella/Usted": "ve",
+          "Nosotros": "vemos",
+          "Ellos/Ellas/Ustedes": "ven"
+        },
+        "Preterite": {
+          "Yo": "vi",
+          "Tú": "viste",
+          "Él/Ella/Usted": "vio",
+          "Nosotros": "vimos",
+          "Ellos/Ellas/Ustedes": "vieron"
+        }
+      }
+    },
+    {
+      "infinitive": "venir",
+      "meaning": "to come",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "vengo",
+          "Tú": "vienes",
+          "Él/Ella/Usted": "viene",
+          "Nosotros": "venimos",
+          "Ellos/Ellas/Ustedes": "vienen"
+        },
+        "Preterite": {
+          "Yo": "vine",
+          "Tú": "viniste",
+          "Él/Ella/Usted": "vino",
+          "Nosotros": "vinimos",
+          "Ellos/Ellas/Ustedes": "vinieron"
+        }
+      }
+    },
+    {
+      "infinitive": "salir",
+      "meaning": "to leave",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "salgo",
+          "Tú": "sales",
+          "Él/Ella/Usted": "sale",
+          "Nosotros": "salimos",
+          "Ellos/Ellas/Ustedes": "salen"
+        },
+        "Preterite": {
+          "Yo": "salí",
+          "Tú": "saliste",
+          "Él/Ella/Usted": "salió",
+          "Nosotros": "salimos",
+          "Ellos/Ellas/Ustedes": "salieron"
+        }
+      }
+    },
+    {
+      "infinitive": "poner",
+      "meaning": "to put",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "pongo",
+          "Tú": "pones",
+          "Él/Ella/Usted": "pone",
+          "Nosotros": "ponemos",
+          "Ellos/Ellas/Ustedes": "ponen"
+        },
+        "Preterite": {
+          "Yo": "puse",
+          "Tú": "pusiste",
+          "Él/Ella/Usted": "puso",
+          "Nosotros": "pusimos",
+          "Ellos/Ellas/Ustedes": "pusieron"
+        }
+      }
+    },
+    {
+      "infinitive": "traer",
+      "meaning": "to bring",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "traigo",
+          "Tú": "traes",
+          "Él/Ella/Usted": "trae",
+          "Nosotros": "traemos",
+          "Ellos/Ellas/Ustedes": "traen"
+        },
+        "Preterite": {
+          "Yo": "traje",
+          "Tú": "trajiste",
+          "Él/Ella/Usted": "trajo",
+          "Nosotros": "trajimos",
+          "Ellos/Ellas/Ustedes": "trajeron"
+        }
+      }
+    },
+    {
+      "infinitive": "conocer",
+      "meaning": "to know (person/place)",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "conozco",
+          "Tú": "conoces",
+          "Él/Ella/Usted": "conoce",
+          "Nosotros": "conocemos",
+          "Ellos/Ellas/Ustedes": "conocen"
+        },
+        "Preterite": {
+          "Yo": "conocí",
+          "Tú": "conociste",
+          "Él/Ella/Usted": "conoció",
+          "Nosotros": "conocimos",
+          "Ellos/Ellas/Ustedes": "conocieron"
+        }
+      }
+    },
+    {
+      "infinitive": "oír",
+      "meaning": "to hear",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "oigo",
+          "Tú": "oyes",
+          "Él/Ella/Usted": "oye",
+          "Nosotros": "oímos",
+          "Ellos/Ellas/Ustedes": "oyen"
+        },
+        "Preterite": {
+          "Yo": "oí",
+          "Tú": "oíste",
+          "Él/Ella/Usted": "oyó",
+          "Nosotros": "oímos",
+          "Ellos/Ellas/Ustedes": "oyeron"
+        }
+      }
+    },
+    {
+      "infinitive": "leer",
+      "meaning": "to read",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "leo",
+          "Tú": "lees",
+          "Él/Ella/Usted": "lee",
+          "Nosotros": "leemos",
+          "Ellos/Ellas/Ustedes": "leen"
+        },
+        "Preterite": {
+          "Yo": "leí",
+          "Tú": "leíste",
+          "Él/Ella/Usted": "leyó",
+          "Nosotros": "leímos",
+          "Ellos/Ellas/Ustedes": "leyeron"
+        }
+      }
+    },
+    {
+      "infinitive": "dormir",
+      "meaning": "to sleep",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "duermo",
+          "Tú": "duermes",
+          "Él/Ella/Usted": "duerme",
+          "Nosotros": "dormimos",
+          "Ellos/Ellas/Ustedes": "duermen"
+        },
+        "Preterite": {
+          "Yo": "dormí",
+          "Tú": "dormiste",
+          "Él/Ella/Usted": "durmió",
+          "Nosotros": "dormimos",
+          "Ellos/Ellas/Ustedes": "durmieron"
+        }
+      }
+    },
+    {
+      "infinitive": "pedir",
+      "meaning": "to ask for/request",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "pido",
+          "Tú": "pides",
+          "Él/Ella/Usted": "pide",
+          "Nosotros": "pedimos",
+          "Ellos/Ellas/Ustedes": "piden"
+        },
+        "Preterite": {
+          "Yo": "pedí",
+          "Tú": "pediste",
+          "Él/Ella/Usted": "pidió",
+          "Nosotros": "pedimos",
+          "Ellos/Ellas/Ustedes": "pidieron"
+        }
+      }
+    },
+    {
+      "infinitive": "sentir",
+      "meaning": "to feel",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "siento",
+          "Tú": "sientes",
+          "Él/Ella/Usted": "siente",
+          "Nosotros": "sentimos",
+          "Ellos/Ellas/Ustedes": "sienten"
+        },
+        "Preterite": {
+          "Yo": "sentí",
+          "Tú": "sentiste",
+          "Él/Ella/Usted": "sintió",
+          "Nosotros": "sentimos",
+          "Ellos/Ellas/Ustedes": "sintieron"
+        }
+      }
+    },
+    {
+      "infinitive": "morir",
+      "meaning": "to die",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "muero",
+          "Tú": "mueres",
+          "Él/Ella/Usted": "muere",
+          "Nosotros": "morimos",
+          "Ellos/Ellas/Ustedes": "mueren"
+        },
+        "Preterite": {
+          "Yo": "morí",
+          "Tú": "moriste",
+          "Él/Ella/Usted": "murió",
+          "Nosotros": "morimos",
+          "Ellos/Ellas/Ustedes": "murieron"
+        }
+      }
+    },
+    {
+      "infinitive": "volver",
+      "meaning": "to return",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "vuelvo",
+          "Tú": "vuelves",
+          "Él/Ella/Usted": "vuelve",
+          "Nosotros": "volvemos",
+          "Ellos/Ellas/Ustedes": "vuelven"
+        },
+        "Preterite": {
+          "Yo": "volví",
+          "Tú": "volviste",
+          "Él/Ella/Usted": "volvió",
+          "Nosotros": "volvimos",
+          "Ellos/Ellas/Ustedes": "volvieron"
+        }
+      }
+    },
+    {
+      "infinitive": "jugar",
+      "meaning": "to play",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "juego",
+          "Tú": "juegas",
+          "Él/Ella/Usted": "juega",
+          "Nosotros": "jugamos",
+          "Ellos/Ellas/Ustedes": "juegan"
+        },
+        "Preterite": {
+          "Yo": "jugué",
+          "Tú": "jugaste",
+          "Él/Ella/Usted": "jugó",
+          "Nosotros": "jugamos",
+          "Ellos/Ellas/Ustedes": "jugaron"
+        }
+      }
+    },
+    {
+      "infinitive": "pensar",
+      "meaning": "to think",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "pienso",
+          "Tú": "piensas",
+          "Él/Ella/Usted": "piensa",
+          "Nosotros": "pensamos",
+          "Ellos/Ellas/Ustedes": "piensan"
+        },
+        "Preterite": {
+          "Yo": "pensé",
+          "Tú": "pensaste",
+          "Él/Ella/Usted": "pensó",
+          "Nosotros": "pensamos",
+          "Ellos/Ellas/Ustedes": "pensaron"
+        }
+      }
+    },
+    {
+      "infinitive": "empezar",
+      "meaning": "to start",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "empiezo",
+          "Tú": "empiezas",
+          "Él/Ella/Usted": "empieza",
+          "Nosotros": "empezamos",
+          "Ellos/Ellas/Ustedes": "empiezan"
+        },
+        "Preterite": {
+          "Yo": "empecé",
+          "Tú": "empezaste",
+          "Él/Ella/Usted": "empezó",
+          "Nosotros": "empezamos",
+          "Ellos/Ellas/Ustedes": "empezaron"
+        }
+      }
+    },
+    {
+      "infinitive": "perder",
+      "meaning": "to lose",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "pierdo",
+          "Tú": "pierdes",
+          "Él/Ella/Usted": "pierde",
+          "Nosotros": "perdemos",
+          "Ellos/Ellas/Ustedes": "pierden"
+        },
+        "Preterite": {
+          "Yo": "perdí",
+          "Tú": "perdiste",
+          "Él/Ella/Usted": "perdió",
+          "Nosotros": "perdimos",
+          "Ellos/Ellas/Ustedes": "perdieron"
+        }
+      }
+    },
+    {
+      "infinitive": "entender",
+      "meaning": "to understand",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "entiendo",
+          "Tú": "entiendes",
+          "Él/Ella/Usted": "entiende",
+          "Nosotros": "entendemos",
+          "Ellos/Ellas/Ustedes": "entienden"
+        },
+        "Preterite": {
+          "Yo": "entendí",
+          "Tú": "entendiste",
+          "Él/Ella/Usted": "entendió",
+          "Nosotros": "entendimos",
+          "Ellos/Ellas/Ustedes": "entendieron"
+        }
+      }
+    },
+    {
+      "infinitive": "preferir",
+      "meaning": "to prefer",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "prefiero",
+          "Tú": "prefieres",
+          "Él/Ella/Usted": "prefiere",
+          "Nosotros": "preferimos",
+          "Ellos/Ellas/Ustedes": "prefieren"
+        },
+        "Preterite": {
+          "Yo": "preferí",
+          "Tú": "preferiste",
+          "Él/Ella/Usted": "prefirió",
+          "Nosotros": "preferimos",
+          "Ellos/Ellas/Ustedes": "prefirieron"
+        }
+      }
+    },
+    {
+      "infinitive": "recordar",
+      "meaning": "to remember",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "recuerdo",
+          "Tú": "recuerdas",
+          "Él/Ella/Usted": "recuerda",
+          "Nosotros": "recordamos",
+          "Ellos/Ellas/Ustedes": "recuerdan"
+        },
+        "Preterite": {
+          "Yo": "recordé",
+          "Tú": "recordaste",
+          "Él/Ella/Usted": "recordó",
+          "Nosotros": "recordamos",
+          "Ellos/Ellas/Ustedes": "recordaron"
+        }
+      }
+    },
+    {
+      "infinitive": "encontrar",
+      "meaning": "to find",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "encuentro",
+          "Tú": "encuentras",
+          "Él/Ella/Usted": "encuentra",
+          "Nosotros": "encontramos",
+          "Ellos/Ellas/Ustedes": "encuentran"
+        },
+        "Preterite": {
+          "Yo": "encontré",
+          "Tú": "encontraste",
+          "Él/Ella/Usted": "encontró",
+          "Nosotros": "encontramos",
+          "Ellos/Ellas/Ustedes": "encontraron"
+        }
+      }
+    },
+    {
+      "infinitive": "almorzar",
+      "meaning": "to eat lunch",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "almuerzo",
+          "Tú": "almuerzas",
+          "Él/Ella/Usted": "almuerza",
+          "Nosotros": "almorzamos",
+          "Ellos/Ellas/Ustedes": "almuerzan"
+        },
+        "Preterite": {
+          "Yo": "almorcé",
+          "Tú": "almorzaste",
+          "Él/Ella/Usted": "almorzó",
+          "Nosotros": "almorzamos",
+          "Ellos/Ellas/Ustedes": "almorzaron"
+        }
+      }
+    },
+    {
+      "infinitive": "costar",
+      "meaning": "to cost",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "cuesto",
+          "Tú": "cuestas",
+          "Él/Ella/Usted": "cuesta",
+          "Nosotros": "costamos",
+          "Ellos/Ellas/Ustedes": "cuestan"
+        },
+        "Preterite": {
+          "Yo": "costé",
+          "Tú": "costaste",
+          "Él/Ella/Usted": "costó",
+          "Nosotros": "costamos",
+          "Ellos/Ellas/Ustedes": "costaron"
+        }
+      }
+    },
+    {
+      "infinitive": "mostrar",
+      "meaning": "to show",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "muestro",
+          "Tú": "muestras",
+          "Él/Ella/Usted": "muestra",
+          "Nosotros": "mostramos",
+          "Ellos/Ellas/Ustedes": "muestran"
+        },
+        "Preterite": {
+          "Yo": "mostré",
+          "Tú": "mostraste",
+          "Él/Ella/Usted": "mostró",
+          "Nosotros": "mostramos",
+          "Ellos/Ellas/Ustedes": "mostraron"
+        }
+      }
+    },
+    {
+      "infinitive": "servir",
+      "meaning": "to serve",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "sirvo",
+          "Tú": "sirves",
+          "Él/Ella/Usted": "sirve",
+          "Nosotros": "servimos",
+          "Ellos/Ellas/Ustedes": "sirven"
+        },
+        "Preterite": {
+          "Yo": "serví",
+          "Tú": "serviste",
+          "Él/Ella/Usted": "sirvió",
+          "Nosotros": "servimos",
+          "Ellos/Ellas/Ustedes": "sirvieron"
+        }
+      }
+    },
+    {
+      "infinitive": "repetir",
+      "meaning": "to repeat",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "repito",
+          "Tú": "repites",
+          "Él/Ella/Usted": "repite",
+          "Nosotros": "repetimos",
+          "Ellos/Ellas/Ustedes": "repiten"
+        },
+        "Preterite": {
+          "Yo": "repetí",
+          "Tú": "repetiste",
+          "Él/Ella/Usted": "repitió",
+          "Nosotros": "repetimos",
+          "Ellos/Ellas/Ustedes": "repitieron"
+        }
+      }
+    },
+    {
+      "infinitive": "reír",
+      "meaning": "to laugh",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "río",
+          "Tú": "ríes",
+          "Él/Ella/Usted": "ríe",
+          "Nosotros": "reímos",
+          "Ellos/Ellas/Ustedes": "ríen"
+        },
+        "Preterite": {
+          "Yo": "reí",
+          "Tú": "reíste",
+          "Él/Ella/Usted": "rio",
+          "Nosotros": "reímos",
+          "Ellos/Ellas/Ustedes": "rieron"
+        }
+      }
+    },
+    {
+      "infinitive": "seguir",
+      "meaning": "to follow",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "sigo",
+          "Tú": "sigues",
+          "Él/Ella/Usted": "sigue",
+          "Nosotros": "seguimos",
+          "Ellos/Ellas/Ustedes": "siguen"
+        },
+        "Preterite": {
+          "Yo": "seguí",
+          "Tú": "seguiste",
+          "Él/Ella/Usted": "siguió",
+          "Nosotros": "seguimos",
+          "Ellos/Ellas/Ustedes": "siguieron"
+        }
+      }
+    },
+    {
+      "infinitive": "creer",
+      "meaning": "to believe",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "creo",
+          "Tú": "crees",
+          "Él/Ella/Usted": "cree",
+          "Nosotros": "creemos",
+          "Ellos/Ellas/Ustedes": "creen"
+        },
+        "Preterite": {
+          "Yo": "creí",
+          "Tú": "creíste",
+          "Él/Ella/Usted": "creyó",
+          "Nosotros": "creímos",
+          "Ellos/Ellas/Ustedes": "creyeron"
+        }
+      }
+    },
+    {
+      "infinitive": "caer",
+      "meaning": "to fall",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "caigo",
+          "Tú": "caes",
+          "Él/Ella/Usted": "cae",
+          "Nosotros": "caemos",
+          "Ellos/Ellas/Ustedes": "caen"
+        },
+        "Preterite": {
+          "Yo": "caí",
+          "Tú": "caíste",
+          "Él/Ella/Usted": "cayó",
+          "Nosotros": "caímos",
+          "Ellos/Ellas/Ustedes": "cayeron"
+        }
+      }
+    },
+    {
+      "infinitive": "conducir",
+      "meaning": "to drive",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "conduzco",
+          "Tú": "conduces",
+          "Él/Ella/Usted": "conduce",
+          "Nosotros": "conducimos",
+          "Ellos/Ellas/Ustedes": "conducen"
+        },
+        "Preterite": {
+          "Yo": "conduje",
+          "Tú": "condujiste",
+          "Él/Ella/Usted": "condujo",
+          "Nosotros": "condujimos",
+          "Ellos/Ellas/Ustedes": "condujeron"
+        }
+      }
+    },
+    {
+      "infinitive": "traducir",
+      "meaning": "to translate",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "traduzco",
+          "Tú": "traduces",
+          "Él/Ella/Usted": "traduce",
+          "Nosotros": "traducimos",
+          "Ellos/Ellas/Ustedes": "traducen"
+        },
+        "Preterite": {
+          "Yo": "traduje",
+          "Tú": "tradujiste",
+          "Él/Ella/Usted": "tradujo",
+          "Nosotros": "tradujimos",
+          "Ellos/Ellas/Ustedes": "tradujeron"
+        }
+      }
+    },
+    {
+      "infinitive": "parecer",
+      "meaning": "to seem",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "parezco",
+          "Tú": "pareces",
+          "Él/Ella/Usted": "parece",
+          "Nosotros": "parecemos",
+          "Ellos/Ellas/Ustedes": "parecen"
+        },
+        "Preterite": {
+          "Yo": "parecí",
+          "Tú": "pareciste",
+          "Él/Ella/Usted": "pareció",
+          "Nosotros": "parecimos",
+          "Ellos/Ellas/Ustedes": "parecieron"
+        }
+      }
+    },
+    {
+      "infinitive": "ofrecer",
+      "meaning": "to offer",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "ofrezco",
+          "Tú": "ofreces",
+          "Él/Ella/Usted": "ofrece",
+          "Nosotros": "ofrecemos",
+          "Ellos/Ellas/Ustedes": "ofrecen"
+        },
+        "Preterite": {
+          "Yo": "ofrecí",
+          "Tú": "ofreciste",
+          "Él/Ella/Usted": "ofreció",
+          "Nosotros": "ofrecimos",
+          "Ellos/Ellas/Ustedes": "ofrecieron"
+        }
+      }
+    },
+    {
+      "infinitive": "nacer",
+      "meaning": "to be born",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "nazco",
+          "Tú": "naces",
+          "Él/Ella/Usted": "nace",
+          "Nosotros": "nacemos",
+          "Ellos/Ellas/Ustedes": "nacen"
+        },
+        "Preterite": {
+          "Yo": "nací",
+          "Tú": "naciste",
+          "Él/Ella/Usted": "nació",
+          "Nosotros": "nacimos",
+          "Ellos/Ellas/Ustedes": "nacieron"
+        }
+      }
+    },
+    {
+      "infinitive": "crecer",
+      "meaning": "to grow",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "crezco",
+          "Tú": "creces",
+          "Él/Ella/Usted": "crece",
+          "Nosotros": "crecemos",
+          "Ellos/Ellas/Ustedes": "crecen"
+        },
+        "Preterite": {
+          "Yo": "crecí",
+          "Tú": "creciste",
+          "Él/Ella/Usted": "creció",
+          "Nosotros": "crecimos",
+          "Ellos/Ellas/Ustedes": "crecieron"
+        }
+      }
+    },
+    {
+      "infinitive": "recoger",
+      "meaning": "to pick up",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "recojo",
+          "Tú": "recoges",
+          "Él/Ella/Usted": "recoge",
+          "Nosotros": "recogemos",
+          "Ellos/Ellas/Ustedes": "recogen"
+        },
+        "Preterite": {
+          "Yo": "recogí",
+          "Tú": "recogiste",
+          "Él/Ella/Usted": "recogió",
+          "Nosotros": "recogimos",
+          "Ellos/Ellas/Ustedes": "recogieron"
+        }
+      }
+    },
+    {
+      "infinitive": "elegir",
+      "meaning": "to choose",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "elijo",
+          "Tú": "eliges",
+          "Él/Ella/Usted": "elige",
+          "Nosotros": "elegimos",
+          "Ellos/Ellas/Ustedes": "eligen"
+        },
+        "Preterite": {
+          "Yo": "elegí",
+          "Tú": "elegiste",
+          "Él/Ella/Usted": "eligió",
+          "Nosotros": "elegimos",
+          "Ellos/Ellas/Ustedes": "eligieron"
+        }
+      }
+    },
+    {
+      "infinitive": "enviar",
+      "meaning": "to send",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "envío",
+          "Tú": "envías",
+          "Él/Ella/Usted": "envía",
+          "Nosotros": "enviamos",
+          "Ellos/Ellas/Ustedes": "envían"
+        },
+        "Preterite": {
+          "Yo": "envié",
+          "Tú": "enviaste",
+          "Él/Ella/Usted": "envió",
+          "Nosotros": "enviamos",
+          "Ellos/Ellas/Ustedes": "enviaron"
+        }
+      }
+    },
+    {
+      "infinitive": "cerrar",
+      "meaning": "to close",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "cierro",
+          "Tú": "cierras",
+          "Él/Ella/Usted": "cierra",
+          "Nosotros": "cerramos",
+          "Ellos/Ellas/Ustedes": "cierran"
+        },
+        "Preterite": {
+          "Yo": "cerré",
+          "Tú": "cerraste",
+          "Él/Ella/Usted": "cerró",
+          "Nosotros": "cerramos",
+          "Ellos/Ellas/Ustedes": "cerraron"
+        }
+      }
+    },
+    {
+      "infinitive": "mentir",
+      "meaning": "to lie",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "miento",
+          "Tú": "mientes",
+          "Él/Ella/Usted": "miente",
+          "Nosotros": "mentimos",
+          "Ellos/Ellas/Ustedes": "mienten"
+        },
+        "Preterite": {
+          "Yo": "mentí",
+          "Tú": "mentiste",
+          "Él/Ella/Usted": "mintió",
+          "Nosotros": "mentimos",
+          "Ellos/Ellas/Ustedes": "mintieron"
+        }
+      }
+    },
+    {
+      "infinitive": "sonar",
+      "meaning": "to sound",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "sueno",
+          "Tú": "suenas",
+          "Él/Ella/Usted": "suena",
+          "Nosotros": "sonamos",
+          "Ellos/Ellas/Ustedes": "suenan"
+        },
+        "Preterite": {
+          "Yo": "soné",
+          "Tú": "sonaste",
+          "Él/Ella/Usted": "sonó",
+          "Nosotros": "sonamos",
+          "Ellos/Ellas/Ustedes": "sonaron"
+        }
+      }
+    },
+    {
+      "infinitive": "soñar",
+      "meaning": "to dream",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "sueño",
+          "Tú": "sueñas",
+          "Él/Ella/Usted": "sueña",
+          "Nosotros": "soñamos",
+          "Ellos/Ellas/Ustedes": "sueñan"
+        },
+        "Preterite": {
+          "Yo": "soñé",
+          "Tú": "soñaste",
+          "Él/Ella/Usted": "soñó",
+          "Nosotros": "soñamos",
+          "Ellos/Ellas/Ustedes": "soñaron"
+        }
+      }
+    },
+    {
+      "infinitive": "volar",
+      "meaning": "to fly",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "vuelo",
+          "Tú": "vuelas",
+          "Él/Ella/Usted": "vuela",
+          "Nosotros": "volamos",
+          "Ellos/Ellas/Ustedes": "vuelan"
+        },
+        "Preterite": {
+          "Yo": "volé",
+          "Tú": "volaste",
+          "Él/Ella/Usted": "voló",
+          "Nosotros": "volamos",
+          "Ellos/Ellas/Ustedes": "volaron"
+        }
+      }
+    },
+    {
+      "infinitive": "construir",
+      "meaning": "to build",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "construyo",
+          "Tú": "construyes",
+          "Él/Ella/Usted": "construye",
+          "Nosotros": "construimos",
+          "Ellos/Ellas/Ustedes": "construyen"
+        },
+        "Preterite": {
+          "Yo": "construí",
+          "Tú": "construiste",
+          "Él/Ella/Usted": "construyó",
+          "Nosotros": "construimos",
+          "Ellos/Ellas/Ustedes": "construyeron"
+        }
+      }
+    },
+    {
+      "infinitive": "destruir",
+      "meaning": "to destroy",
+      "category": "Irregular",
+      "conjugations": {
+        "Present": {
+          "Yo": "destruyo",
+          "Tú": "destruyes",
+          "Él/Ella/Usted": "destruye",
+          "Nosotros": "destruimos",
+          "Ellos/Ellas/Ustedes": "destruyen"
+        },
+        "Preterite": {
+          "Yo": "destruí",
+          "Tú": "destruiste",
+          "Él/Ella/Usted": "destruyó",
+          "Nosotros": "destruimos",
+          "Ellos/Ellas/Ustedes": "destruyeron"
+        }
+      }
+    }
+  ]
+}

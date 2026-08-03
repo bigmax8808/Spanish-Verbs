@@ -1,46 +1,35 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Práctica de Verbos — Spanish verb conjugation practice
 
-# Spanish Verbs - AI-Powered Conjugation App
+A Spanish verb conjugation quiz, in two forms that share one dataset:
 
-A React application for learning Spanish verb conjugations, powered by Google's Gemini AI.
+- **Local Flask app** (`app.py`) — the desktop version, with Claude-generated
+  example sentences and macOS `say` pronunciation.
+- **Single-file web build** (`docs/index.html`) — a self-contained, bilingual
+  (English/Spanish) build with no backend, published at
+  **https://bigmax8808.github.io/Spanish-Verbs/**
 
-View your app in AI Studio: https://ai.studio/apps/drive/1mE9o8cbootDMmpb1IW-XzpuwuXb-hFJF
-
-## 🚀 Deployment
-
-This application is ready to be deployed to GitHub Pages with automated deployment via GitHub Actions.
-
-**📖 [View Deployment Guide](DEPLOYMENT.md)** - Complete instructions for deploying to GitHub Pages
-
-Once deployed, your app will be available at: **https://bigmax8808.github.io/Spanish-Verbs/**
-
-## 🛠️ Run Locally
-
-**Prerequisites:** Node.js 20+
-
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key:
-   ```
-   GEMINI_API_KEY=your_api_key_here
-   ```
-
-3. Run the app:
-   ```bash
-   npm run dev
-   ```
-
-4. Open http://localhost:3000 in your browser
-
-## 📦 Build for Production
+## Run locally
 
 ```bash
-npm run build
+pip install -r requirements.txt
+python app.py
 ```
 
-The built files will be in the `dist` directory.
+Serves http://127.0.0.1:5000 (honors `$PORT`). On the Mac, the
+`Verbos de Español` desktop launcher runs `launch.command`, which starts the
+same server on port 5050 and opens a browser.
+
+Put an Anthropic key in a gitignored `.env` (`ANTHROPIC_API_KEY=...`) for the
+example-sentence tips. Without it the quiz still works fully — the tip endpoint
+just returns nothing.
+
+## Publish the web version
+
+```bash
+python3 artifact/build.py
+cp artifact/conjugatepro.html docs/index.html
+```
+
+Then commit and push. GitHub Pages serves `/docs` on `main`; there is no build
+step in CI. See [artifact/NOTES.md](artifact/NOTES.md) for how the single-file
+build differs from the Flask app.
