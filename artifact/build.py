@@ -49,12 +49,31 @@ PAGES_OUTPUT = APP / "docs" / "index.html"
 # No CSS reset is needed here: Tailwind's preflight is already inlined.
 # The fragment opens with <title> and one <style> block, then goes straight to
 # markup, so the end of that block is where <head> closes.
+#
+# The icons are the desktop app's own launcher icon (see assets/make_icons.py),
+# and are real files in docs/ rather than data: URIs — Pages serves them fine,
+# and og:image has to be an absolute URL for link previews to resolve it at all.
+# None of this goes in the fragment: Artifacts sets its own icon and would have
+# no way to serve these files.
+SITE_URL = "https://bigmax8808.github.io/Spanish-Verbs/"
 DOCUMENT_HEAD = """<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-"""
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="Verbos">
+<meta name="theme-color" content="#5c0b17">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pr&aacute;ctica de Verbos">
+<meta property="og:description" content="Spanish verb conjugation practice \
+&mdash; present and preterite, regular and irregular.">
+<meta property="og:url" content="{site_url}">
+<meta property="og:image" content="{site_url}og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+""".format(site_url=SITE_URL)
 HEAD_SPLIT = "</style>"
 DOCUMENT_MIDDLE = "</style>\n</head>\n<body>"
 DOCUMENT_TAIL = "\n</body>\n</html>\n"

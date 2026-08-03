@@ -42,7 +42,9 @@ python3 artifact/build.py   # writes BOTH outputs
 One build, two outputs, same page wrapped differently for two hosts:
 
 - **`artifact/conjugatepro.html`** — a fragment with no `<!doctype>`/`<html>`/`<head>`/`<body>`. Claude Artifacts supplies those at publish time and rejects a file carrying its own.
-- **`docs/index.html`** — a complete document, because GitHub Pages serves files verbatim. It must keep its own `<meta charset>` and `<meta name="viewport">`; without the viewport meta, mobile Safari uses a 980px layout viewport and renders the page at ~40% size on a phone.
+- **`docs/index.html`** — a complete document, because GitHub Pages serves files verbatim. It must keep its own `<meta charset>` and `<meta name="viewport">`; without the viewport meta, mobile Safari uses a 980px layout viewport and renders the page at ~40% size on a phone. Its head also carries the favicon / apple-touch-icon / Open Graph tags.
+
+Site icons (`docs/*.png`) are generated from the **macOS launcher icon** by `python3 assets/make_icons.py` (needs Pillow; `assets/appicon.icns` is the source of truth). They're committed, and `artifact/build.py` does not depend on Pillow — rerun the script only when the artwork changes, and keep the `theme-color` in `build.py` in step with the background it prints.
 
 `artifact/build.py` holds every difference from the local app as a named patch, and **fails loudly** if `static/app.js` changed in a way a patch no longer matches, rather than emitting a half-converted file. The web build inlines the verb data, swaps macOS `say` for browser `speechSynthesis`, drops the Claude tips entirely, and is bilingual (English/Spanish). Full detail in [artifact/NOTES.md](artifact/NOTES.md).
 

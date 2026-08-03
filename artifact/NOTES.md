@@ -28,6 +28,12 @@ Both are build output. Don't hand-edit either; change `static/app.js`,
 `as_document()`, which splits the fragment at its single `</style>` and fails
 loudly if that split point ever moves.
 
+The document head also carries the site's icons and link-preview tags, which the
+fragment doesn't get — Artifacts sets its own icon and couldn't serve the image
+files anyway. The artwork is the **macOS launcher icon**, so the site looks like
+the same product on a home screen or in a shared link; regenerate the PNGs in
+`docs/` with `python3 assets/make_icons.py` if it ever changes.
+
 If `static/app.js` has changed in a way the build doesn't recognise, the build
 **fails with the name of the patch that no longer matches** rather than emitting
 a half-converted file. Fix that patch in `build.py` and rerun.
