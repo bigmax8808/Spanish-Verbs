@@ -60,7 +60,9 @@ list, conjugation chart — is byte-identical to `static/app.js`. What differs:
    are all gone; the feedback card ends after the result.
 4. **Page shell.** Flask template + Tailwind CDN → `shell.html` + inlined CSS.
 5. **Language.** The artifact is **bilingual** (English/Spanish, switchable from
-   the top of Settings); the local app is English-only. Both languages live in
+   **Interface Language** at the foot of Settings — last because it's about the
+   app's chrome, not about what gets practiced); the local app is English-only.
+   Both languages live in
    the `UI` table injected by the "interface language table" patch, keyed by what
    each string *is* rather than by its English text, so neither language is the
    source and a third would just be one more table. `t(key)` looks a string up,
@@ -90,7 +92,21 @@ is persisted between visits — every open starts from these.
    - Titled **Práctica de Verbos**, no tagline.
    - The settings panel collapses behind its own heading below `lg`; from `lg` up
      a media query keeps it open regardless (the JS only toggles a class, so it
-     never has to know the breakpoint).
+     never has to know the breakpoint). Its disclosure control states what the
+     tap will do — **×** closes the open panel, **+** opens the collapsed one —
+     in a filled blue circle. It replaced a thin grey chevron that read as
+     decoration rather than as a control.
+   - **The conjugation panel has a tense switcher.** It opens on the tense the
+     question is asking (`state.chartTense` is set every time the panel opens, so
+     browsing another tense never carries into the next verb), and any tense the
+     verb data holds can be shown from there. Switching re-renders only the panel
+     — the round, a typed answer and the seen-history are all untouched. The
+     highlighted row marks the form being asked, so it shows only while the
+     round's own tense is the one on screen.
+   - That extra row costs height the shortest phones didn't have to spare, and a
+     panel taller than the screen loses its own header and close button off the
+     top, so the panel is capped at the viewport and the conjugations scroll
+     inside it. Checked at 375×667, the tightest case.
    - The prompt is one line — `Ellos/Ellas/Ustedes — Pretérito` — stacked *above*
      a full-width field, instead of the local app's subject → field row with the
      tense underneath. That row can't fit a phone and clipped the field.
@@ -165,7 +181,17 @@ speech synthesis speaking through Mónica.
 Re-verified after the layout change at a true 375px, with the worst-case prompt
 (`Ellos/Ellas/Ustedes — Pretérito`) forced: no horizontal overflow in the normal,
 feedback, or chart-open states; settings collapse and reopen; the chart label
-flips Show/Hide; at 1280px the settings panel is open and the chevron hidden.
+flips Show/Hide; at 1280px the settings panel is open and the disclosure icon
+hidden.
+
+Re-verified again after the tense switcher: the panel opens on the round's tense
+after a Preterite-only round, switching to Present swaps the forms and the title
+and drops the subject highlight, switching back restores it, the typed answer and
+the Show/Hide label survive a switch, and closing and reopening returns to the
+round's tense even after browsing another one. Both languages label the pills
+(Present/Preterite, Presente/Pretérito). At 375×667 the panel header stays on
+screen and the grid scrolls; at 1200px the settings icon is hidden and the panel
+ignores the collapsed class. No console errors.
 
 Checking a phone width needs a workaround: headless Chrome won't go below a
 500px window, and the preview pane lays out at 981px whatever it's resized to.

@@ -46,7 +46,7 @@ One build, two outputs, same page wrapped differently for two hosts:
 
 Site icons (`docs/*.png`) are generated from the **macOS launcher icon** by `python3 assets/make_icons.py` (needs Pillow; `assets/appicon.icns` is the source of truth). They're committed, and `artifact/build.py` does not depend on Pillow — rerun the script only when the artwork changes, and keep the `theme-color` in `build.py` in step with the background it prints.
 
-`artifact/build.py` holds every difference from the local app as a named patch, and **fails loudly** if `static/app.js` changed in a way a patch no longer matches, rather than emitting a half-converted file. The web build inlines the verb data, swaps macOS `say` for browser `speechSynthesis`, drops the Claude tips entirely, and is bilingual (English/Spanish). Full detail in [artifact/NOTES.md](artifact/NOTES.md).
+`artifact/build.py` holds every difference from the local app as a named patch, and **fails loudly** if `static/app.js` changed in a way a patch no longer matches, rather than emitting a half-converted file. The web build inlines the verb data, swaps macOS `say` for browser `speechSynthesis`, drops the Claude tips entirely, is bilingual (English/Spanish), and lets the conjugation panel show any tense rather than only the one being asked. Full detail in [artifact/NOTES.md](artifact/NOTES.md).
 
 Deployment is **GitHub Pages serving `/docs` on `main`** — no GitHub Actions workflow, no build step in CI. Pushing an updated `docs/index.html` is the deploy. The site is at https://bigmax8808.github.io/Spanish-Verbs/.
 

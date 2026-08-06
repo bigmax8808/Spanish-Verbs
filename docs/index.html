@@ -1423,13 +1423,63 @@ button:focus-visible {
    track the breakpoint for layout. */
 #settings-body { display: flex; }
 #settings.is-collapsed #settings-body { display: none; }
-.settings-chevron { transition: transform 0.2s ease; }
-#settings.is-collapsed .settings-chevron { transform: rotate(-90deg); }
+
+/* The disclosure icon states what the tap will do — × closes the open panel,
+   + opens the collapsed one. A filled circle rather than a bare glyph: the
+   chevron this replaces was a thin grey mark that read as decoration. */
+.settings-icon {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  background-color: #eff6ff;
+  color: #2563eb;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1;
+  transition: background-color 0.2s ease;
+}
+#settings-toggle:hover .settings-icon { background-color: #dbeafe; }
+.settings-icon-open { display: none; }
+#settings.is-collapsed .settings-icon-close { display: none; }
+#settings.is-collapsed .settings-icon-open { display: inline; }
 
 @media (min-width: 1024px) {
   #settings.is-collapsed #settings-body { display: flex; }
   #settings-toggle { cursor: default; }
-  .settings-chevron { display: none; }
+  .settings-icon { display: none; }
+}
+
+/* Tense switcher above the conjugation grid. Lives here rather than in Tailwind
+   classes because the build's Tailwind scan doesn't see this file. It supplies
+   the gap below the panel header, so the grid drops its own top padding rather
+   than the two stacking into a gulf. */
+.chart-tenses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+}
+@media (min-width: 768px) {
+  .chart-tenses { padding: 1.25rem 2rem; }
+}
+#chart-body { padding-top: 0; }
+
+/* The extra row costs height that the shortest phones didn't have to spare, and
+   a panel taller than the screen loses its own header — and its close button —
+   off the top. Cap the panel and let the conjugations scroll inside it. */
+#chart-panel > div {
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 2rem);
+}
+#chart-panel > div > *:not(#chart-body) { flex: none; }
+#chart-body { flex: 1 1 auto; min-height: 0; overflow-y: auto; }
+@media (min-width: 768px) {
+  #chart-panel > div { max-height: calc(100vh - 4rem); }
 }
 
 /* "Ver" and "Repasar" share a third of a phone screen, and the Spanish words are
@@ -1441,7 +1491,6 @@ button:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   .fade-in { animation: none; }
   * { transition-duration: 0.01ms !important; }
-  .settings-chevron { transition: none; }
 }
 </style>
 </head>
@@ -1465,15 +1514,10 @@ button:focus-visible {
       <button id="settings-toggle" type="button" aria-controls="settings-body" aria-expanded="true"
         class="w-full flex items-center justify-between text-xl font-bold text-slate-700">
         <span data-i18n="settings.title">Settings</span>
-        <span class="settings-chevron text-slate-400" aria-hidden="true">&#9662;</span>
+        <span class="settings-icon" aria-hidden="true"><span class="settings-icon-close">&#10005;</span><span class="settings-icon-open">+</span></span>
       </button>
 
       <div id="settings-body" class="flex flex-col gap-6">
-        <div>
-          <label class="block text-sm font-semibold text-slate-500 mb-1 uppercase tracking-wider" data-i18n="settings.language">Language</label>
-          <div id="lang-buttons" class="flex gap-2"></div>
-        </div>
-
         <div>
           <label class="block text-sm font-semibold text-slate-500 mb-1 uppercase tracking-wider" data-i18n="settings.tense">Tense</label>
           <p class="text-xs text-slate-400 mb-2" data-i18n="settings.chooseMulti">Select one or more</p>
@@ -1484,6 +1528,13 @@ button:focus-visible {
           <label class="block text-sm font-semibold text-slate-500 mb-1 uppercase tracking-wider" data-i18n="settings.verbType">Verb Type</label>
           <p class="text-xs text-slate-400 mb-2" data-i18n="settings.chooseMulti">Select one or more</p>
           <div id="category-buttons" class="flex flex-col gap-2"></div>
+        </div>
+
+        <!-- Last, and ruled off: this one is about the app's chrome rather than
+             about what gets practiced. -->
+        <div class="pt-4 border-t border-slate-50">
+          <label class="block text-sm font-semibold text-slate-500 mb-1 uppercase tracking-wider" data-i18n="settings.language">Interface Language</label>
+          <div id="lang-buttons" class="flex gap-2"></div>
         </div>
       </div>
     </section>
@@ -1547,6 +1598,8 @@ button:focus-visible {
         <h4 id="chart-title" class="text-xl font-bold capitalize"></h4>
         <button id="chart-close" class="p-1 hover:bg-slate-700 rounded-full transition-colors" data-i18n-aria="aria.closeChart" aria-label="Close chart">&#10005;</button>
       </div>
+      <!-- Any tense can be looked at from here, not just the one being asked. -->
+      <div id="chart-tenses" class="chart-tenses"></div>
       <div id="chart-body" class="p-6 md:p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4"></div>
     </div>
   </div>
@@ -1596,7 +1649,7 @@ const LANGUAGES = [["en", "English"], ["es", "Español"]];
 const UI = {
   en: {
     "settings.title": "Settings",
-    "settings.language": "Language",
+    "settings.language": "Interface Language",
     "settings.tense": "Tense",
     "settings.verbType": "Verb Type",
     "settings.chooseMulti": "Select one or more",
@@ -1645,7 +1698,7 @@ const UI = {
   },
   es: {
     "settings.title": "Ajustes",
-    "settings.language": "Idioma",
+    "settings.language": "Idioma de la interfaz",
     "settings.tense": "Tiempo verbal",
     "settings.verbType": "Tipo de verbo",
     "settings.chooseMulti": "Elige uno o más",
@@ -1739,12 +1792,13 @@ let VERBS = [];
 let SUBJECTS = [];
 
 const state = {
-  lang: "en", // interface language; the switch at the top of Settings changes it
+  lang: "en", // interface language; the switch at the foot of Settings changes it
   // Both are now multi-select: each is a list of the currently-enabled options.
   selectedTenses: ["Present"],
   selectedCategories: ["Regular ar/er/ir"],
   currentVerb: null,
   currentTense: null, // the tense drawn for the current round
+  chartTense: null, // tense shown in the conjugation panel; set when it opens
   currentSubject: null,
   feedback: null, // { isCorrect, isAccentError, correctAnswer, userAnswer }
   showChart: false,
@@ -2253,6 +2307,7 @@ function renderPractice() {
   if (chartToggle)
     chartToggle.onclick = () => {
       state.showChart = !state.showChart;
+      if (state.showChart) state.chartTense = state.currentTense;
       renderChart();
     };
 
@@ -2322,16 +2377,43 @@ function renderChart() {
     return;
   }
   panel.classList.remove("hidden");
+
+  // Falls back to the round's tense so the panel is never blank if it is
+  // rendered before a toggle has set one.
+  const shown = state.chartTense || state.currentTense;
   document.getElementById(
     "chart-title"
   ).innerHTML = `&#128214; ${state.currentVerb.infinitive} (${tenseLabel(
-    state.currentTense
+    shown
   )})`;
+
+  // Only the tenses the verb data actually holds — a missing one would render
+  // a row of undefineds rather than fail.
+  const chartTenses = TENSES.filter((tense) => state.currentVerb.conjugations[tense]);
+  const tenseBox = document.getElementById("chart-tenses");
+  tenseBox.innerHTML = chartTenses
+    .map(
+      (tense) =>
+        `<button class="px-4 py-2 rounded-xl font-medium transition-all ${
+          tense === shown
+            ? "bg-blue-600 text-white shadow-md shadow-blue-100"
+            : "bg-slate-50 text-slate-600 hover:bg-slate-100"
+        }">${tenseLabel(tense)}</button>`
+    )
+    .join("");
+  [...tenseBox.children].forEach((el, i) => {
+    el.onclick = () => {
+      state.chartTense = chartTenses[i];
+      renderChart();
+    };
+  });
 
   const body = document.getElementById("chart-body");
   body.innerHTML = SUBJECTS.map((subj) => {
-    const conj = state.currentVerb.conjugations[state.currentTense][subj];
-    const active = subj === state.currentSubject;
+    const conj = state.currentVerb.conjugations[shown][subj];
+    // The highlight marks the form being asked, so it belongs to the round's
+    // own tense and goes away when another tense is being browsed.
+    const active = subj === state.currentSubject && shown === state.currentTense;
     return `<div class="p-4 rounded-2xl border ${
       active ? "bg-blue-50 border-blue-200 shadow-sm" : "bg-slate-50 border-slate-100"
     }">

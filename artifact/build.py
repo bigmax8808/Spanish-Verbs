@@ -289,7 +289,7 @@ PATCHES.append((
 # so each `old` below is matched against the text those leave behind.
 
 # The whole interface, in both languages. The local Flask app is English-only;
-# the artifact ships bilingual with a switch at the top of Settings.
+# the artifact ships bilingual with a switch at the foot of Settings.
 PATCHES.append((
     "interface language table",
     '''const TENSES = ["Present", "Preterite"];
@@ -309,7 +309,7 @@ const LANGUAGES = [["en", "English"], ["es", "Español"]];
 const UI = {
   en: {
     "settings.title": "Settings",
-    "settings.language": "Language",
+    "settings.language": "Interface Language",
     "settings.tense": "Tense",
     "settings.verbType": "Verb Type",
     "settings.chooseMulti": "Select one or more",
@@ -358,7 +358,7 @@ const UI = {
   },
   es: {
     "settings.title": "Ajustes",
-    "settings.language": "Idioma",
+    "settings.language": "Idioma de la interfaz",
     "settings.tense": "Tiempo verbal",
     "settings.verbType": "Tipo de verbo",
     "settings.chooseMulti": "Elige uno o más",
@@ -455,8 +455,18 @@ PATCHES.append((
     """const state = {
   // Both are now multi-select: each is a list of the currently-enabled options.""",
     """const state = {
-  lang: "en", // interface language; the switch at the top of Settings changes it
+  lang: "en", // interface language; the switch at the foot of Settings changes it
   // Both are now multi-select: each is a list of the currently-enabled options.""",
+))
+
+# The conjugation panel can show any tense, not only the one being asked, so it
+# needs a tense of its own. Set every time the panel opens (see the chart-toggle
+# patch), which is what makes it always open on the question's own tense.
+PATCHES.append((
+    "chart tense state",
+    "  currentTense: null, // the tense drawn for the current round\n",
+    "  currentTense: null, // the tense drawn for the current round\n"
+    "  chartTense: null, // tense shown in the conjugation panel; set when it opens\n",
 ))
 
 # The language switch, plus translated labels on the option buttons. The map
@@ -673,6 +683,78 @@ PATCHES.append((
     """  ).innerHTML = `&#128214; ${state.currentVerb.infinitive} (${tenseLabel(
     state.currentTense
   )})`;""",
+))
+
+# Opening the panel always resets it to the tense being tested, so it answers
+# the question in front of the user first and only then becomes a reference.
+PATCHES.append((
+    "chart opens on the current tense",
+    """    chartToggle.onclick = () => {
+      state.showChart = !state.showChart;
+      renderChart();
+    };""",
+    """    chartToggle.onclick = () => {
+      state.showChart = !state.showChart;
+      if (state.showChart) state.chartTense = state.currentTense;
+      renderChart();
+    };""",
+))
+
+# The panel gains a tense switcher. It reads from `state.chartTense` rather than
+# the round's tense, and changing it re-renders only the panel — the question,
+# the answer field and the seen-history are all untouched.
+# Matched against the text the two chart patches above leave behind.
+PATCHES.append((
+    "tense switcher in the conjugation panel",
+    """  panel.classList.remove("hidden");
+  document.getElementById(
+    "chart-title"
+  ).innerHTML = `&#128214; ${state.currentVerb.infinitive} (${tenseLabel(
+    state.currentTense
+  )})`;
+
+  const body = document.getElementById("chart-body");
+  body.innerHTML = SUBJECTS.map((subj) => {
+    const conj = state.currentVerb.conjugations[state.currentTense][subj];
+    const active = subj === state.currentSubject;""",
+    """  panel.classList.remove("hidden");
+
+  // Falls back to the round's tense so the panel is never blank if it is
+  // rendered before a toggle has set one.
+  const shown = state.chartTense || state.currentTense;
+  document.getElementById(
+    "chart-title"
+  ).innerHTML = `&#128214; ${state.currentVerb.infinitive} (${tenseLabel(
+    shown
+  )})`;
+
+  // Only the tenses the verb data actually holds — a missing one would render
+  // a row of undefineds rather than fail.
+  const chartTenses = TENSES.filter((tense) => state.currentVerb.conjugations[tense]);
+  const tenseBox = document.getElementById("chart-tenses");
+  tenseBox.innerHTML = chartTenses
+    .map(
+      (tense) =>
+        `<button class="px-4 py-2 rounded-xl font-medium transition-all ${
+          tense === shown
+            ? "bg-blue-600 text-white shadow-md shadow-blue-100"
+            : "bg-slate-50 text-slate-600 hover:bg-slate-100"
+        }">${tenseLabel(tense)}</button>`
+    )
+    .join("");
+  [...tenseBox.children].forEach((el, i) => {
+    el.onclick = () => {
+      state.chartTense = chartTenses[i];
+      renderChart();
+    };
+  });
+
+  const body = document.getElementById("chart-body");
+  body.innerHTML = SUBJECTS.map((subj) => {
+    const conj = state.currentVerb.conjugations[shown][subj];
+    // The highlight marks the form being asked, so it belongs to the round's
+    // own tense and goes away when another tense is being browsed.
+    const active = subj === state.currentSubject && shown === state.currentTense;""",
 ))
 
 
