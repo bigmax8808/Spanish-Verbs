@@ -1,20 +1,36 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Práctica de Verbos — Spanish verb conjugation practice
 
-# Run and deploy your AI Studio app
+A Spanish verb conjugation quiz, in two forms that share one dataset:
 
-This contains everything you need to run your app locally.
+- **Local Flask app** (`app.py`) — the desktop version, with Claude-generated
+  example sentences and macOS `say` pronunciation.
+- **Single-file web build** (`docs/index.html`) — a self-contained, bilingual
+  (English/Spanish) build with no backend, published at
+  **https://bigmax8808.github.io/Spanish-Verbs/**
 
-View your app in AI Studio: https://ai.studio/apps/drive/1mE9o8cbootDMmpb1IW-XzpuwuXb-hFJF
+## Run locally
 
-## Run Locally
+```bash
+pip install -r requirements.txt
+python app.py
+```
 
-**Prerequisites:**  Node.js
+Serves http://127.0.0.1:5000 (honors `$PORT`). On the Mac, the
+`Verbos de Español` desktop launcher runs `launch.command`, which starts the
+same server on port 5050 and opens a browser.
 
+Put an Anthropic key in a gitignored `.env` (`ANTHROPIC_API_KEY=...`) for the
+example-sentence tips. Without it the quiz still works fully — the tip endpoint
+just returns nothing.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Publish the web version
+
+```bash
+python3 artifact/build.py
+```
+
+That writes both `docs/index.html` (the Pages site) and
+`artifact/conjugatepro.html` (the Claude Artifact). Then commit and push —
+GitHub Pages serves `/docs` on `main`, with no build step in CI. See
+[artifact/NOTES.md](artifact/NOTES.md) for how the two outputs differ and how
+the single-file build differs from the Flask app.

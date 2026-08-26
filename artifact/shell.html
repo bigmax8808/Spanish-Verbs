@@ -1,0 +1,261 @@
+<title>Práctica de Verbos</title>
+
+<style>
+/*__TAILWIND_CSS__*/
+
+/* Custom styles carried over verbatim from templates/index.html. */
+.accent-font { font-family: Georgia, 'Times New Roman', serif; }
+@keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
+.fade-in { animation: fadein 0.4s ease; }
+
+/* The design commits to a single light theme, matching the local app, so the
+   light ground is pinned regardless of the viewer's theme preference. */
+:root, :root[data-theme="dark"], :root[data-theme="light"] { color-scheme: light; }
+html, body { background-color: #f8fafc; }
+
+/* Keyboard focus needs to stay visible: the answer field suppresses the default
+   outline in favour of its coloured bottom border, but nothing else should. */
+button:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* Settings collapse. The panel starts open everywhere; on a phone the heading
+   doubles as a disclosure button so it can be folded away once it's set.
+   From lg up there's a dedicated column for it and it is always open — the
+   media query wins over the collapsed class rather than the JS having to
+   track the breakpoint for layout. */
+#settings-body { display: flex; }
+#settings.is-collapsed #settings-body { display: none; }
+
+/* The disclosure icon states what the tap will do — × closes the open panel,
+   + opens the collapsed one. A filled circle rather than a bare glyph: the
+   chevron this replaces was a thin grey mark that read as decoration. */
+.settings-icon {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  background-color: #eff6ff;
+  color: #2563eb;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1;
+  transition: background-color 0.2s ease;
+}
+#settings-toggle:hover .settings-icon { background-color: #dbeafe; }
+.settings-icon-open { display: none; }
+#settings.is-collapsed .settings-icon-close { display: none; }
+#settings.is-collapsed .settings-icon-open { display: inline; }
+
+@media (min-width: 1024px) {
+  #settings.is-collapsed #settings-body { display: flex; }
+  #settings-toggle { cursor: default; }
+  .settings-icon { display: none; }
+}
+
+/* Tense switcher above the conjugation grid. Lives here rather than in Tailwind
+   classes because the build's Tailwind scan doesn't see this file. It supplies
+   the gap below the panel header, so the grid drops its own top padding rather
+   than the two stacking into a gulf. */
+.chart-tenses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+}
+@media (min-width: 768px) {
+  .chart-tenses { padding: 1.25rem 2rem; }
+}
+#chart-body { padding-top: 0; }
+
+/* The extra row costs height that the shortest phones didn't have to spare, and
+   a panel taller than the screen loses its own header — and its close button —
+   off the top. Cap the panel and let the conjugations scroll inside it. */
+#chart-panel > div {
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 2rem);
+}
+#chart-panel > div > *:not(#chart-body) { flex: none; }
+#chart-body { flex: 1 1 auto; min-height: 0; overflow-y: auto; }
+@media (min-width: 768px) {
+  #chart-panel > div { max-height: calc(100vh - 4rem); }
+}
+
+/* "Ver" and "Repasar" share a third of a phone screen, and the Spanish words are
+   wider than the tile's default padding and letter-spacing leave room for. Only
+   this tile is narrowed, so the three stat tiles still look identical. */
+#stat-incorrect-tile { padding-left: 0.5rem; padding-right: 0.5rem; }
+.tile-actions { letter-spacing: 0; gap: 0.25rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in { animation: none; }
+  * { transition-duration: 0.01ms !important; }
+}
+</style>
+
+<div class="min-h-screen p-4 md:p-8 flex flex-col items-center">
+
+  <!-- Header -->
+  <header class="w-full max-w-4xl mb-8 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold text-slate-800 tracking-tight">
+      Práctica de <span class="text-blue-600">Verbos</span>
+    </h1>
+  </header>
+
+  <main class="w-full max-w-4xl grid grid-cols-1 lg:grid-cols-3 gap-8 pb-32">
+
+    <!-- Settings Panel -->
+    <!-- Open on load; the heading collapses it on phones. Every string carrying
+         data-i18n is filled in from the active language at render time. -->
+    <section id="settings" class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col gap-6 h-fit">
+      <button id="settings-toggle" type="button" aria-controls="settings-body" aria-expanded="true"
+        class="w-full flex items-center justify-between text-xl font-bold text-slate-700">
+        <span data-i18n="settings.title">Settings</span>
+        <span class="settings-icon" aria-hidden="true"><span class="settings-icon-close">&#10005;</span><span class="settings-icon-open">+</span></span>
+      </button>
+
+      <div id="settings-body" class="flex flex-col gap-6">
+        <div>
+          <label class="block text-sm font-semibold text-slate-500 mb-1 uppercase tracking-wider" data-i18n="settings.tense">Tense</label>
+          <p class="text-xs text-slate-400 mb-2" data-i18n="settings.chooseMulti">Select one or more</p>
+          <div id="tense-buttons" class="flex flex-col gap-2"></div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-semibold text-slate-500 mb-1 uppercase tracking-wider" data-i18n="settings.verbType">Verb Type</label>
+          <p class="text-xs text-slate-400 mb-2" data-i18n="settings.chooseMulti">Select one or more</p>
+          <div id="category-buttons" class="flex flex-col gap-2"></div>
+        </div>
+
+        <!-- Last, and ruled off: this one is about the app's chrome rather than
+             about what gets practiced. -->
+        <div class="pt-4 border-t border-slate-50">
+          <label class="block text-sm font-semibold text-slate-500 mb-1 uppercase tracking-wider" data-i18n="settings.language">Interface Language</label>
+          <div id="lang-buttons" class="flex gap-2"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Practice Area -->
+    <section class="lg:col-span-2 flex flex-col gap-6">
+      <!-- id is the scroll target: after Siguiente verbo the card is brought to
+           the top of the viewport so the new verb is the first thing on screen. -->
+      <div id="practice-panel" class="bg-white p-6 md:p-12 rounded-3xl shadow-xl border border-slate-100 relative overflow-hidden">
+        <div class="absolute top-0 left-0 p-4">
+          <button id="exit-retest" data-i18n="retest.exit" class="hidden px-3 py-1 bg-amber-100 text-amber-700 text-xs font-bold rounded-full uppercase hover:bg-amber-200 transition-colors">
+            &larr; Exit Retest
+          </button>
+        </div>
+        <div class="absolute top-0 right-0 p-4">
+          <span id="tense-badge" class="px-3 py-1 bg-slate-100 text-slate-500 text-xs font-bold rounded-full uppercase"></span>
+        </div>
+
+        <div id="practice-card" class="flex flex-col items-center text-center">
+          <!-- filled by JS -->
+          <div class="flex items-center justify-center h-64 text-slate-400" data-i18n="app.loading">Loading practice set...</div>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="grid grid-cols-3 gap-4">
+        <div class="p-4 rounded-2xl border text-center shadow-sm text-green-600 bg-green-50 border-green-100">
+          <div id="stat-correct" class="text-2xl font-bold">0</div>
+          <div class="text-xs font-semibold uppercase tracking-wider opacity-80" data-i18n="stats.correct">Correct</div>
+        </div>
+        <div id="stat-incorrect-tile" class="p-4 rounded-2xl border shadow-sm text-red-600 bg-red-50 border-red-100 flex flex-col items-center gap-2 text-center">
+          <div class="w-full text-center">
+            <div id="stat-incorrect" class="text-2xl font-bold text-center">0</div>
+            <div class="text-xs font-semibold uppercase tracking-wider opacity-80" data-i18n="stats.missed">Missed</div>
+          </div>
+          <div class="tile-actions w-full flex items-center justify-between text-xs font-bold uppercase tracking-wider pt-1 border-t border-red-100">
+            <button id="menu-view" class="hover:underline" data-i18n="stats.view">View</button>
+            <button id="menu-retest" class="hover:underline" data-i18n="stats.retest">Retest</button>
+          </div>
+        </div>
+        <div class="p-4 rounded-2xl border text-center shadow-sm text-blue-600 bg-blue-50 border-blue-100">
+          <div id="stat-accuracy" class="text-2xl font-bold">0%</div>
+          <div class="text-xs font-semibold uppercase tracking-wider opacity-80" data-i18n="stats.accuracy">Accuracy</div>
+        </div>
+      </div>
+
+      <!-- Reset sits with the numbers it clears, not in the settings panel. -->
+      <div class="flex justify-center">
+        <button id="reset-stats" data-i18n="stats.reset"
+          class="py-2 px-8 border-2 border-slate-200 text-slate-400 font-bold rounded-xl hover:border-red-200 hover:text-red-500 transition-all">
+          Reset Stats
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating conjugation chart -->
+  <div id="chart-panel" class="hidden fixed bottom-0 left-0 right-0 z-50 p-4 md:p-8">
+    <div class="max-w-4xl mx-auto bg-white rounded-t-3xl shadow-2xl border-t border-l border-r border-slate-200 overflow-hidden">
+      <div class="bg-slate-800 px-6 py-4 flex items-center justify-between text-white">
+        <h4 id="chart-title" class="text-xl font-bold capitalize"></h4>
+        <button id="chart-close" class="p-1 hover:bg-slate-700 rounded-full transition-colors" data-i18n-aria="aria.closeChart" aria-label="Close chart">&#10005;</button>
+      </div>
+      <!-- Any tense can be looked at from here, not just the one being asked. -->
+      <div id="chart-tenses" class="chart-tenses"></div>
+      <div id="chart-body" class="p-6 md:p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4"></div>
+    </div>
+  </div>
+
+  <!-- Floating errors list -->
+  <div id="errors-panel" class="hidden fixed bottom-0 left-0 right-0 z-50 p-4 md:p-8">
+    <div class="max-w-4xl mx-auto bg-white rounded-t-3xl shadow-2xl border-t border-l border-r border-slate-200 overflow-hidden">
+      <div class="bg-slate-800 px-6 py-4 flex items-center justify-between text-white">
+        <h4 class="text-xl font-bold" data-i18n="errors.title">Your Errors</h4>
+        <div class="flex items-center gap-4">
+          <button id="errors-retest" data-i18n="errors.retest" class="px-4 py-2 bg-amber-500 text-white text-sm font-bold rounded-xl hover:bg-amber-600 transition-colors">
+            Retest Errors
+          </button>
+          <button id="errors-close" class="p-1 hover:bg-slate-700 rounded-full transition-colors" data-i18n-aria="aria.closeErrors" aria-label="Close errors">&#10005;</button>
+        </div>
+      </div>
+      <div id="errors-body" class="p-6 md:p-8 flex flex-col gap-3 max-h-96 overflow-y-auto"></div>
+    </div>
+  </div>
+
+  <footer class="mt-auto py-8 text-slate-400 text-sm">
+    &copy; 2026 Práctica de Verbos
+  </footer>
+</div>
+
+<script>
+/*__VERB_DATA__*/
+
+/*__APP_JS__*/
+</script>
+
+<script>
+// Settings disclosure. The panel starts open (no is-collapsed class in the
+// markup). Only the collapsed *class* is managed here; whether that class has
+// any effect is the stylesheet's call, so the panel is always open from lg up
+// without this script knowing the breakpoint. The click is ignored on wide
+// screens so the heading doesn't silently toggle a hidden state.
+(function () {
+  const panel = document.getElementById("settings");
+  const toggle = document.getElementById("settings-toggle");
+  const narrow = window.matchMedia("(max-width: 1023px)");
+
+  function syncAria() {
+    const open = !narrow.matches || !panel.classList.contains("is-collapsed");
+    toggle.setAttribute("aria-expanded", String(open));
+  }
+
+  toggle.addEventListener("click", () => {
+    if (!narrow.matches) return;
+    panel.classList.toggle("is-collapsed");
+    syncAria();
+  });
+
+  narrow.addEventListener("change", syncAria);
+  syncAria();
+})();
+</script>
